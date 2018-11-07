@@ -1,0 +1,25 @@
+.title-intro{
+	background-image:url('#{$url-img}/back-title-intro.svg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	display:table;
+	.wrapper-intro{
+		display:table-cell;
+		vertical-align:middle;
+		&.no-video{
+			padding: 20px;
+			@include media(">=990px") { // TABLET EN ADELANTE
+           		padding: 100px;
+            }
+			h1{
+				text-align:center;
+			}
+		}
+		h1{
+			text-align:left;
+			color:$azulOscuro;
+			font-family:$fonth1;
+			font-size:29px;
+		}
+	}
+}

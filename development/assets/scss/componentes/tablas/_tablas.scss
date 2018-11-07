@@ -1,0 +1,119 @@
+/* rubrica y tiempo estimado */
+
+.componente-tablas span{
+	font-weight: bold;
+}
+.componente-tablas{
+	// padding-top: 2%;
+	// padding-bottom: 5%;
+}
+.componente-tablas h1{
+	text-align: center;
+}
+.componente-tablas table {
+	
+	border-collapse: separate;
+	// border-spacing: 2px;
+	// -webkit-border-horizontal-spacing: 2px;
+	// -webkit-border-vertical-spacing: 2px;
+	margin: 0;
+	padding: 0;
+}
+.componente-tablas table thead tr{
+	background: #77c043;
+}
+.eje{
+	background: #f9f9f9;
+	font-weight: bold;
+}
+.componente-tablas table tr {
+	background: #ededed;
+	padding: .35em;
+}
+.componente-tablas table td {
+	padding: .2em;
+	text-align: left;
+}
+.componente-tablas table th {
+	font-size: .85em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: .625em;
+}
+.tiempo-estimado{
+	margin: 0 auto;
+	width: 600px;	
+}
+.tiempo-estimado table{
+	width: 100%;
+}
+
+@media screen and (max-width: 890px) {
+
+	
+  .componente-tablas table {
+    border: 0;
+  }
+  .componente-tablas table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .componente-tablas table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  .componente-tablas table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  .componente-tablas table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 3%;
+    padding-right: 5%;
+  }
+  .componente-tablas table td:last-child {
+    border-bottom: 0;
+  }
+  .componente-tablas table tbody tr td p {
+    padding-left: 35%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+	
+ 	.componente-tablas table tbody tr td p {
+    padding-left: 40%;
+  
+  	}
+	.tiempo-estimado{
+	  width: 100%;
+	}
+
+}
+@media screen and (max-width: 500px) {
+  .componente-tablas table tbody tr td p {
+    padding-left: 50%;
+  
+  }
+
+}
+
+tiempo-estimado{
+  display:block;
+  text-align:center;
+}

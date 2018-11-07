@@ -1,0 +1,20 @@
+{
+  "name": "aula-virtual",
+  "version": "2.0.0",
+  "description": "Aula virtual - Areandina",
+  "main": "gruntfile.js",
+  "author": "Fredy Morales",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.4.1"
+  },
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}

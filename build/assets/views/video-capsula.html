@@ -1,0 +1,30 @@
+<section class="video-capsula row">
+	<article class="cap-video col-sm-12 col-md-7  no-padding ">
+		<av-tube  class="slider box" href="{{$ctrl.video}}" ng-if='tipoVideo() == "youtube"' ob-placeholder="{{$ctrl.imagenVideo}}"></av-tube>
+		<vimeo url="{{idVimeo()}}" image="{{$ctrl.imagenVideo}}" ng-if='tipoVideo() == "vimeo" '></vimeo>
+		<all-iframe url='{{$ctrl.video}}' image="{{$ctrl.imagenVideo}}" ng-if='tipoVideo() == "all"'></all-iframe>		
+	</article>
+	<article class=" cap-texto col-sm-12 col-md-5 box">
+		<div>
+			<span class="capsule">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 380.738 380.739" style="enable-background:new 0 0 380.738 380.739;" xml:space="preserve">
+					<g>
+						<path d="M345.698,35.031C302.871-7.818,237.54-11.92,199.79,25.829L96.977,128.655l-71.141,71.129   c-37.75,37.761-33.637,103.082,9.19,145.943c42.838,42.826,108.17,46.928,145.919,9.189l71.129-71.141l102.825-102.814   C392.66,143.201,388.536,77.87,345.698,35.031z M162.61,336.559c-27.583,27.583-76.578,23.447-109.227-9.19   c-32.637-32.648-36.773-81.633-9.19-109.228l71.129-71.129L233.74,265.43L162.61,336.559z" fill="#E2147D"/>
+					</g>
+				</svg>
+			</span>
+			<span class="tipo-recurso-label">Videocápsula</span>
+		</div>
+		
+		<h2>{{$ctrl.titulo}}</h2>
+		<p ng-bind-html="text"></p>
+		
+
+		<div >
+			<div class="creditos" ng-init="open = false" ng-show="open">
+			    <p class="creditos-text">{{$ctrl.creditos}}</p>
+			</div>
+			<button class="btn-creditos" ng-click="open = !open" ng-class="{'open': open}">&#169;</button>
+		</div>
+	</article>
+</section>

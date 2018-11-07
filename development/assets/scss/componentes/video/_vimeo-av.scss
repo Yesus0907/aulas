@@ -1,0 +1,133 @@
+
+
+
+
+vimeo{
+    display: block;
+    margin-left: -15px;
+    margin-right: -15px;
+    // margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    .vimeo{
+        position: relative;
+        img.video{
+            width: 100%;
+            height:100%;
+            z-index: 1;
+            position: relative;
+        }
+    }
+}
+.button-play{
+            outline: none;
+            opacity: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* border-color: transparent; */
+            background: rgba(0, 0, 0, 0.43);
+            cursor: pointer;
+            border:none;
+            z-index: 3;
+            // @include prefix((
+            //       transform: scale(1)
+            //       ), webkit moz);
+            
+            .SVGInline-svg path {
+                fill: #cccccc;
+                @include prefix((
+                    transition:.4s all ease-in-out
+                  ), webkit moz);
+            }
+            &:hover .iconPlay {
+                @include prefix((
+                    transform: scale(1.5)
+                  ), webkit moz);
+            }
+            &:hover .SVGInline-svg path{
+                fill:$verdeInsti;
+            }
+            .iconPlay{
+                width: 70px;
+                height: 70px;
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                @include prefix((
+                    transition:.4s transform ease-in-out
+                  ), webkit moz);
+            }
+            // &:hover{
+            //     @include prefix((
+            //       transform: scale(1.10)
+            //       ), webkit moz);
+            // }
+            &.active{
+                background:transparent;
+                  -webkit-animation-name: popOut;
+                animation-name: popOut;
+                 -webkit-animation-duration: .3s;
+                animation-duration: .3s;
+                animation-fill-mode: forwards;
+            }
+            .play-pulse {
+                border-radius: 50%;
+                border: 3px solid rgba(255,255,255,0);
+                -webkit-animation-name: pulse;
+                animation-name: pulse;
+                -webkit-animation-duration: 3.2s;
+                animation-duration: 3.2s;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-play-state: running;
+                animation-play-state: running;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+@keyframes pulse {
+ 0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-color: rgba(255,255,255,.55);
+}
+100% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    border-color: rgba(255,255,255,0);
+ }
+}
+
+@keyframes pop {
+   0% {
+        -webkit-transform: scale(0) translate(-50%,-50%);
+        transform: scale(0) translate(-50%,-50%);
+    }
+    75% {
+        -webkit-transform: scale(1.25) translate(-50%,-50%);
+        transform: scale(1.25) translate(-50%,-50%);
+    }
+    100% {
+        -webkit-transform: scale(1) translate(-50%,-50%);
+        transform: scale(1) translate(-50%,-50%);
+    }
+}
+
+@keyframes popOut {
+   
+    0% {
+        -webkit-transform: scale(1) ;
+        transform: scale(1) ;
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}

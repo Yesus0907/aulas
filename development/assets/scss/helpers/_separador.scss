@@ -1,0 +1,21 @@
+.separador{
+	border-top: 2px dashed #ccc;
+    opacity: .6;
+    position: relative;
+    margin: 20px 5px 0;
+    text-align: center;
+    height: 17px;
+     @include media(">=768px") { // TABLET EN ADELANTE
+		margin: 20px 64px 0;    
+	}
+    span{
+    	position: relative;
+	    top: -12px;
+	    text-transform: uppercase;
+	    text-align: center;
+	    font-size: 11px;
+	    font-weight: 700;
+	    background: #f7f7f7;
+	    padding: 0 11px;
+    }
+}

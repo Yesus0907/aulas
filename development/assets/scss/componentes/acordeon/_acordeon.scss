@@ -1,0 +1,174 @@
+
+.acordeon{
+    .a-header {    
+      padding: 10px 5px;
+      cursor: pointer;
+      color: $blanco;
+      background: $verdeInsti;
+      border-bottom: 1.4px solid rgba(0, 0, 0, 0.28);
+      border-radius: 3px 3px 0 0;
+      &.magenta{
+        background: $magentaInsti;
+      }
+      &.azul{
+        background: $azulInsti;
+        
+      }
+      &.naranja{
+        background: $naranjaInsti;
+      }
+    }
+    .a-header:before {  
+       content: "\e97b"; 
+       font-family: icomoon;
+       float: right;
+       margin-right: 15px;
+        margin-top: 2px;
+       font-size: 20px; 
+    }
+    .desplegable:before {  
+       content: "\e928";
+       font-family: icomoon;
+       float: right;
+       margin-right: 15px;
+       margin-top: 2px;
+       font-size: 20px; 
+    }
+    //  h1,h2,h3,h4 {    
+    //    padding: 5px 14px important;
+    //    font-family: BrownStd !important;
+    //    font-size: 20px;
+       
+    // }
+}
+.subtema{
+    .header {    
+      // padding:10px 0;
+      cursor: pointer;
+      position: relative;
+      &:hover:before{
+       animation-name: bounceOut;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      }
+    }
+    .header .titulo-section p{
+        padding-right: inherit;
+        font-size:14px;
+        @include media(">=768px") { // TABLET EN ADELANTE
+          padding-right: 70px;
+        }
+     }
+     .header .titulo-section {
+           margin-bottom: 0;
+          margin-top: 15px;
+     }
+    .header:before {  
+       content: "\e97b"; 
+       font-family: icomoon;
+       float: right;
+        margin-right: 15px;
+        margin-top: 2px;
+        font-size: 32px;
+        position: absolute;
+        right: 5px;
+        z-index: 1;
+        top: 15px;
+        color:$blanco;
+        @include media(">=768px") { // TABLET EN ADELANTE
+          top: 35%; 
+          color:$verdeInsti;
+        }
+    }
+    .desplegable:before {  
+       content: "\e928";
+       font-family: icomoon;
+       float: right;
+        margin-right: 15px;
+        margin-top: 2px;
+        font-size: 32px;
+        position: absolute;
+        right: 5px;
+        z-index: 1;
+        top: 15px;
+        color:$blanco;
+        @include media(">=768px") { // TABLET EN ADELANTE
+          top: 35%; 
+          color:$verdeInsti;
+        }
+    }
+    .content{
+      padding: 10px 10px 0 25px;
+      border-left: 2px dashed #3fbf33;
+      margin-left: 12px;
+    }
+    
+}
+
+
+.titulo-section{
+  webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-top: 73px solid $magentaInsti;
+    border-left: 0;
+    background:$azulOscuro;
+    position: relative;
+    @include media(">=768px") { // TABLET EN ADELANTE
+    border-left: 165px solid $magentaInsti;
+    border-top: 0;
+    }   
+    &.verde{
+     border-left: 165px solid $verdeInsti;
+     border-right: 10px solid $verdeInsti;
+    }
+    &.naranja{
+      border-left: 165px solid $naranjaInsti;
+    border-right: 10px solid $naranjaInsti;
+    }
+    &:before{
+      content: "\e912";
+      color: $blanco;
+      position: absolute;
+      font-size: 52px;
+      z-index: 1;
+      font-family: icomoon;
+    margin-left: -19px;
+    left: 59px;
+    top: -38px;
+      @include prefix((
+      transform: rotate(-11deg) translate(0, -50%)
+    ), webkit moz);
+    @include media(">=768px") { // TABLET EN ADELANTE
+      top:50%;
+      left: -106px;
+      margin-left: 0;
+      font-size: 58px;
+      }
+    }
+    h1{
+      font-family: BrownStd;
+      font-weight: 700;
+      font-size: 24px;
+      line-height:1.1;
+      text-transform:initial;
+    }
+    p, a, h1, h2, h3, h4, h5, span{
+      color: $blanco;
+    }
+    span{
+      position: absolute;
+      -webkit-transform: translate(-50%,-50%) rotate(-11deg);
+      -moz-transform: translate(-50%,-50%) rotate(-11deg);
+      transform: translate(-50%,-50%) rotate(-11deg);
+      font-size: 22px;
+      left: 55px;
+      top: -40px;
+      font-weight: 700;
+      @include media(">=768px") { // TABLET EN ADELANTE
+      left: -88px;
+        top: 50%;
+      }
+    }
+}

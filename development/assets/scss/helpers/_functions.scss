@@ -1,0 +1,49 @@
+// color
+@function shades($color, $change: n) {
+  @if $change == n {
+    @return $color;
+  }
+  @if $change == l1 {
+    @return tint($color, 100%/1.5);
+  }
+  @if $change == l2 {
+    @return tint($color, 100%/2);
+  }
+  @if $change == l3 {
+    @return tint($color, 100%/2.5);
+  }
+  @if $change == l4 {
+    @return tint($color, 100%/3);
+  }
+  @if $change == l5 {
+    @return tint($color, 100%/3.5);
+  }
+  @if $change == l6 {
+    @return tint($color, 100%/4);
+  }
+
+
+  @if $change == d1 {
+    @return shade($color, 100%);
+  }
+  @if $change == d2 {
+    @return shade($color, 100/2);
+  }
+  @if $change == d3 {
+    @return shade($color, 100/3);
+  }
+  @if $change == d4 {
+    @return shade($color, 100/4);
+  }
+  @if $change == d5 {
+    @return shade($color, 100/5);
+  }
+  @if $change == d6 {
+    @return shade($color, 100/6);
+  }
+  @if $change == d7 {
+    @return shade($color, 75%);
+  }
+
+}
+/////

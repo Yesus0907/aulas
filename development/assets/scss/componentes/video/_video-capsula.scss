@@ -1,0 +1,23 @@
+video-capsula vimeo{
+	margin:0;
+    border-radius: 0;
+}
+
+.allIframe{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	background-size:cover;
+}
+
+button.button-play:before {
+    content: "areandina";
+    font-family: areandina;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    opacity: .2;
+    left: 10px;
+}

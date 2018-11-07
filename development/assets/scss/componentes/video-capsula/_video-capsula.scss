@@ -1,0 +1,131 @@
+video-capsula{
+
+}
+.video-capsula{
+	background:#fbf9f9;
+	    border-radius: 10px;
+    overflow: hidden;
+	.cap-texto{
+		overflow:hidden;
+		
+		padding-bottom:15px;
+		&:before{
+			content: "";
+			width: 100%;
+			height: 4px;
+			background: #e2147d;
+			position: absolute;
+			left: 0;
+		}
+		// border-right: 1px solid #eaeaea;
+		.tipo-recurso-label{
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 12px;
+			color:$magentaInsti;
+			margin-bottom: 14px;
+			margin-top:10px;
+		}
+		.creditos{
+			position: absolute;
+			top: 0;
+			background: $verdeInsti;
+			left: 0;
+			height: 100%;
+			.creditos-text{
+				word-wrap: break-word;
+				color: #fff;
+			    text-align: right;
+			    padding: 50px 30px;
+			}
+		}
+		h2{
+			margin-top: 17px;
+		}
+		.btn-creditos{
+			outline: none;
+			cursor:pointer;
+			position: absolute;
+			z-index: 2;
+			right: 6px;
+			top: 6px;
+			width: 34px;
+			height: 35px;
+			background: none;
+			border: none;
+			font-size: 26px;
+			font-weight: bold;
+			opacity:.3;
+			color:$magentaInsti;
+			transition:.4s opacity ease-in-out;
+			&:before{
+				content:"x";
+				width: 20px;
+    			height: 20px;
+    			position: absolute;
+			    color: #fff;
+			    opacity: 0;
+			}
+			&.open{
+				color:transparent;
+				&:before{
+					opacity:1;
+					color:#fff;
+				}
+			}
+			&:hover{
+				opacity:1;
+			}
+		}
+		.capsule{
+			margin-top: 11px;
+		    margin-left: -6px;
+		    margin-right: 5px;
+		}
+		span{
+			display:inline-block;
+		}
+	}
+}
+
+
+// animation angular
+
+/* cuando entra*/
+.creditos.ng-hide-add         { 
+	animation-name: slideOutDown;
+	 animation-duration: .4s;
+	 animation-fill-mode: both;
+}
+
+/* cuando sale */
+.creditos.ng-hide-remove      { 
+ 	animation-name:slideInDown;
+ 	 animation-duration: .4s;
+ 	 animation-fill-mode: both;
+}
+
+
+// keyframe
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+

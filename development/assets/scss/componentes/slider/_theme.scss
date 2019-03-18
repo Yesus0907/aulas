@@ -250,7 +250,7 @@ slider.video{
     }
 
     .slick-next {
-        right:-23px ;
+        right:-23px;
         [dir="rtl"] & {
             left: -25px;
             right: auto;
@@ -284,37 +284,39 @@ slider.video{
         margin-right: -15px;
     }
 }
+//====  
 //==== slider de lecturas recomendadas
 slider.lectura{
-    margin-left: -15px;
-    margin-right: -15px;
+    // margin-left: -15px;
+    // margin-right: -15px;
     .lectura-recomendada{
-        margin-left: 0;
-        margin-right: 11px;
-        margin-bottom:0;
+        // margin-left: 0;
+        // margin-right: 11px;
+        // margin-bottom:0;
+        margin:2px;
         .titulo{
-            display:none;
+            // display:none;
         }
     }
     .slick-list{
-           padding: 84px 30px 7px 19px !important;
+        padding: 0 !important;
         @include media(">=800px") { // TABLET EN ADELANTE
-                padding: 3px 50px !important;
+                padding: 3px 0 !important;
             }
         &:before{
-            content: "";
-            font-size: 30px;
-            width: 100%;
-            display: block;
-            position: absolute;
-            line-height: .8;
-            font-weight: 700;
-            height: 76px;
-            background: #f1f1f1;
-            left: 0;
-            top: 10px;
-            z-index: 3;
-            border: 2px solid $magentaInsti;
+            // content: "";
+            // font-size: 30px;
+            // width: 100%;
+            // display: block;
+            // position: absolute;
+            // line-height: .8;
+            // font-weight: 700;
+            // height: 76px;
+            // background: #f1f1f1;
+            // left: 0;
+            // top: 10px;
+            // z-index: 3;
+            // border: 2px solid $magentaInsti;
 
             @include media(">=800px") { // TABLET EN ADELANTE
                 width: 48%;
@@ -326,16 +328,16 @@ slider.lectura{
             }
         }
         &:after{
-         content:"";
-         background:url(#{$url-img}/lecturas-recomendada.svg) no-repeat;
-         position: absolute;
-         width: 50%;
-         height: 69px;
-         top: 39px;
-         z-index: 3;
-         transform: translate(0, -50%);
-         left: 28px;
-         background-size: 60% 100%;
+        //  content:"";
+        //  background:url(#{$url-img}/lecturas-recomendada.svg) no-repeat;
+        //  position: absolute;
+        //  width: 50%;
+        //  height: 69px;
+        //  top: 39px;
+        //  z-index: 3;
+        //  transform: translate(0, -50%);
+        //  left: 28px;
+        //  background-size: 60% 100%;
          @include media(">=800px") { // TABLET EN ADELANTE
             left:20px;
             width: 32%;
@@ -351,27 +353,57 @@ slider.lectura{
          text-align:right;
          @include media(">=800px") { // TABLET EN ADELANTE
             bottom:44px;
-             width:46%;
-             top:inherit;
-             right:inherit;
-             text-align:right;
+            width:46%;
+            top:inherit;
+            right:inherit;
+            text-align:right;
         }
-         @include media(">=1100px") { // TABLET EN ADELANTE
-                width: 30%;
-            }
+        @include media(">=1100px") { // TABLET EN ADELANTE
+            width: 30%;
+        }
     }
-    .slick-prev,
-    .slick-next {
-        display:none !important;
+    // 
+    //
+    //
+    // 
+    .slick-next{
+        height: 69px;
+        width: 34px;
+        opacity: .7;
+        background: #E91E63;
+        padding: 0;
+        z-index: 1;
+        &::before{
+            color:rgb(255, 255, 255);
+        }
+        &.slick-disabled{
+            background: rgb(99, 99, 99);
+        }        
     }
-    // .slick-prev{
-    //     left: 50%;
-    //     transform: translate(-370%,-50%);
-    // }
-    // .slick-next{
-    //     left: 50%;
-    //     transform: translate(-188%,-50%);
-    // }
+    .slick-prev{
+        left: -2.1%;
+        // transform: translate(-370%,-50%);
+        height: 69px;
+        width: 34px;
+        opacity: .7;
+        background: #E91E63;
+        padding: 0;
+        z-index: 1;
+        &::before {
+            color:rgb(255, 255, 255);
+        }
+        &.slick-disabled {
+            background: rgb(99, 99, 99);
+        }
+        @include media("<=500px")
+        { // TABLET EN ADELANTE
+            left:-5.8%;
+        }
+    }
+    //
+    //
+    //
+    // 
     .col-md-4{
         width:100%;
     }
@@ -383,6 +415,7 @@ slider.lectura{
     }
 }
 //==== slider de lecturas recomendadas
+//=============
 slider.boton{
     margin-left: -15px;
     margin-right: -15px;
@@ -401,9 +434,9 @@ slider.boton{
         padding-right:1.2%;
         margin-top:30px;
     }
-    .slick-list{
+    // .slick-list{
        
-    }
+    // }
     &[background="false"]{
     box-shadow:none;
     -webkit-box-shadow:none;

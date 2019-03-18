@@ -85,11 +85,11 @@ angular
           
 
            // fix cuando son 3 slider (buscar una mejor manera de solucionar esto)
-          var count_elements = $(element).children('lectura-recomendada').length;
-          if (count_elements == 3) {
-            $(element).append("<div></div>");
-            $(element).addClass("child");
-          }
+          // var count_elements = $(element).children('lectura-recomendada').length;
+          // if (count_elements == 2) {
+          //   $(element).append("<div></div>");
+          //   $(element).addClass("child");
+          // }
          //--
 
           initOptions = function () {

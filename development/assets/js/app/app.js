@@ -20,14 +20,9 @@ var aulaApp = angular.module('aulaApp', [
     'videoCapsula',
     'angularModalService',
     // 'slickCarousel',
-    'vAccordion',
-
-    
+    'vAccordion',    
     // 'slickExampleApp',
-   // 'ironVimeoEmbed',
-    
-
-
+    // 'ironVimeoEmbed',
     ]);
 aulaApp.config(['$sceProvider',function($sceProvider) {
   // Completely disable SCE.  For demonstration purposes only!
@@ -57,10 +52,12 @@ aulaApp.config(['$sceProvider',function($sceProvider) {
 //-- Se define version - se usara como directorio para todas las plantillas
 //==================================================================
 aulaApp.constant('versionApp', {
-    appName: 'AulaVirtual - AREANDINA',
+    appName: 'AulaVirtual - AREANDINA', 
     appVersion: '2.0.3',
+
     apiUrl: 'https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/'
-     // apiUrl: './assets/'
+
+    // apiUrl: './assets/'
 
 });
 //==================================================================
@@ -130,8 +127,8 @@ aulaApp.factory('datosCanvas', ['$rootScope', function($rootScope) {
 //==================================================================
 //-- confuracion de rutas y animaciones
 //==================================================================
- aulaApp.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', 'gsapifyRouterProvider',
-      function ($stateProvider, $locationProvider, $urlRouterProvider, gsapifyRouterProvider) {
+ aulaApp.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', 'gsapifyRouterProvider', 'versionApp',
+      function ($stateProvider, $locationProvider, $urlRouterProvider, gsapifyRouterProvider, versionApp) {
 
         gsapifyRouterProvider.defaults = {
           enter: 'slideRight',
@@ -210,7 +207,7 @@ aulaApp.factory('datosCanvas', ['$rootScope', function($rootScope) {
           url: '/',
           views: {
             main: {
-              templateUrl:'https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/views/home.html',
+              templateUrl:  versionApp.apiUrl + 'views/home.html',
               controller: 'homeCtrl',
             },
           },

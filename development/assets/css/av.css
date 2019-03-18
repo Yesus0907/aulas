@@ -947,7 +947,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .visible-md-inline-block,
 .visible-lg-block,
 .visible-lg-inline,
-.visible-lg-inline-block {
+.visible-lg-inline-block,
+.visible-lg-flex {
   display: none !important;
 }
 
@@ -1069,6 +1070,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media (min-width: 1200px) {
+  .visible-lg-flex {
+    display: flex !important;
+  }
+
   .visible-lg-block {
     display: block !important;
   }
@@ -2612,9 +2617,7 @@ v-pane-content > div {
   padding-left: 15px;
 }
 .vAccordion--default v-pane-content {
-  padding: 0 23px 0 40px;
-  border-left: 2px dashed #3fbf33;
-  margin-left: 12px;
+  padding: 0 23px 0 23px;
   margin-top: -15px;
   padding-bottom: 15px;
   opacity: 0;
@@ -3374,40 +3377,16 @@ slider.video .slick-list {
   margin-right: -15px;
 }
 
-slider.lectura {
-  margin-left: -15px;
-  margin-right: -15px;
-}
 slider.lectura .lectura-recomendada {
-  margin-left: 0;
-  margin-right: 11px;
-  margin-bottom: 0;
-}
-slider.lectura .lectura-recomendada .titulo {
-  display: none;
+  margin: 2px;
 }
 slider.lectura .slick-list {
-  padding: 84px 30px 7px 19px !important;
+  padding: 0 !important;
 }
 @media (min-width: 800px) {
   slider.lectura .slick-list {
-    padding: 3px 50px !important;
+    padding: 3px 0 !important;
   }
-}
-slider.lectura .slick-list:before {
-  content: "";
-  font-size: 30px;
-  width: 100%;
-  display: block;
-  position: absolute;
-  line-height: .8;
-  font-weight: 700;
-  height: 76px;
-  background: #f1f1f1;
-  left: 0;
-  top: 10px;
-  z-index: 3;
-  border: 2px solid #E2147D;
 }
 @media (min-width: 800px) {
   slider.lectura .slick-list:before {
@@ -3420,18 +3399,6 @@ slider.lectura .slick-list:before {
   slider.lectura .slick-list:before {
     width: 34%;
   }
-}
-slider.lectura .slick-list:after {
-  content: "";
-  background: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/lecturas-recomendada.svg) no-repeat;
-  position: absolute;
-  width: 50%;
-  height: 69px;
-  top: 39px;
-  z-index: 3;
-  transform: translate(0, -50%);
-  left: 28px;
-  background-size: 60% 100%;
 }
 @media (min-width: 800px) {
   slider.lectura .slick-list:after {
@@ -3461,9 +3428,39 @@ slider.lectura .slick-dots {
     width: 30%;
   }
 }
-slider.lectura .slick-prev,
 slider.lectura .slick-next {
-  display: none !important;
+  height: 69px;
+  width: 34px;
+  opacity: .7;
+  background: #E91E63;
+  padding: 0;
+  z-index: 1;
+}
+slider.lectura .slick-next::before {
+  color: white;
+}
+slider.lectura .slick-next.slick-disabled {
+  background: #636363;
+}
+slider.lectura .slick-prev {
+  left: -2.1%;
+  height: 69px;
+  width: 34px;
+  opacity: .7;
+  background: #E91E63;
+  padding: 0;
+  z-index: 1;
+}
+slider.lectura .slick-prev::before {
+  color: white;
+}
+slider.lectura .slick-prev.slick-disabled {
+  background: #636363;
+}
+@media (max-width: 500px) {
+  slider.lectura .slick-prev {
+    left: -5.8%;
+  }
 }
 slider.lectura .col-md-4 {
   width: 100%;
@@ -5043,6 +5040,102 @@ button.btn-autor {
   }
 }
 
+.movil-nav {
+  background: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.movil-nav .cont-b {
+  height: 33.33333333%;
+  display: flex;
+}
+.movil-nav .cont-b .fott {
+  z-index: 2;
+  margin-top: 15px;
+}
+.movil-nav h2 {
+  font-size: 15px;
+  color: white;
+  font-weight: normal;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+.movil-nav span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.movil-nav p {
+  font-size: 60px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.movil-nav a {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  -moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+}
+.movil-nav .b-inicio img, .movil-nav .b-eje1 img, .movil-nav .b-eje2 img, .movil-nav .b-eje3 img, .movil-nav .b-eje4 img, .movil-nav .b-cierre img {
+  z-index: 0;
+  position: absolute;
+  opacity: 0.1;
+  min-width: 100%;
+}
+.movil-nav .b-inicio {
+  background: #FFB71C;
+}
+.movil-nav .b-eje1 {
+  background: #FF9B10;
+}
+.movil-nav .b-eje2 {
+  background: #45B3E5;
+}
+.movil-nav .b-eje3 {
+  background: #009AE0;
+}
+.movil-nav .b-eje4 {
+  background: #7DC672;
+}
+.movil-nav .b-cierre {
+  background: #45BB33;
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  .movil-nav {
+    background: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .movil-nav a {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .movil-nav .fott {
+    text-align: left;
+    margin-left: 15px;
+  }
+  .movil-nav .b-inicio img, .movil-nav .b-eje1 img, .movil-nav .b-eje2 img, .movil-nav .b-eje3 img, .movil-nav .b-eje4 img, .movil-nav .b-cierre img {
+    width: 100%;
+    height: auto;
+  }
+}
 .aulaModulos {
   position: absolute;
   color: #fbf9f9;

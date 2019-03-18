@@ -55,18 +55,27 @@ angular.module('avSlider', ['slickCarousel'])
     //====================================
     $scope.lectura = {
       method: {},
-      dots: true,
+
       infinite: false,
-      speed: 300,
-      slidesToShow: 3,
+      slidesToShow: 1,
+      centerMode:false,
       slidesToScroll: 1,
-      centerMode:true,
-      autoplaySpeed: 1000,
+
+      
+      // dots: true,
+      // infinite: false,
+      // speed: 300,
+      // slidesToShow: 3,
+      // slidesToScroll: 1,
+      // centerMode:false,
+      // autoplaySpeed: 1000,
+      // variableWidth: true,
+
       responsive: [
         {
           breakpoint: 1100,
           settings: {
-            slidesToShow: 2,
+            slidesToShow:1,
             slidesToScroll: 1,
           }
         },

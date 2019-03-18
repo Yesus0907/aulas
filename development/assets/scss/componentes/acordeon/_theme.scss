@@ -15,10 +15,12 @@
            padding-bottom: 0;
            padding-top: 15px;
         }
-        padding: 0 23px 0 40px;
-        border-left: 2px dashed #3fbf33;
-        margin-left: 12px;
+        // 
+        padding: 0 23px 0 23px;
+        // border-left: 2px dashed #3fbf33;
+        // margin-left: 12px;
         margin-top:-15px;
+        // 
         padding-bottom: $v-accordion-spacing;
         opacity: 0;
         transform: translate3d(0, 0, 0);

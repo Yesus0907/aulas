@@ -47,8 +47,7 @@ aulaApp.directive("modal", ["versionApp", "$timeout", function (versionApp, $tim
           return "btn-cuadrado";
         }
       }
-
-
+      
       $scope.botonModal = function(){
         var d = [
           {
@@ -66,6 +65,32 @@ aulaApp.directive("modal", ["versionApp", "$timeout", function (versionApp, $tim
             "icono": "icon-eye",
             "class": "pruebaObjetiva"
           },
+          // ====
+          // ==== SE AGREGAN ESTOS NUEVOS A PETICIÓN DE REUNIÓN 30/11/2018 ===
+          // ====
+          {
+            "nombre": "videorresumen i",
+            "icono": "icon-camera-video",
+            "class": "videoresumen"
+          },
+          {
+            "nombre": "videorresumen ii",
+            "icono": "icon-camera-video",
+            "class": "videoresumen"
+          },
+          {
+            "nombre": "videorresumen iii",
+            "icono": "icon-camera-video",
+            "class": "videoresumen"
+          },
+          //--==--==--==--==--==--==--==--//
+          {
+            "nombre": "videorrelato",
+            "icono": "icon-camera-video",
+            "class": "videorelato"
+          },
+          //=========================================================
+          //=========================================================
           {
             "nombre": "videoresumen",
             "icono": "icon-camera-video",
@@ -177,8 +202,7 @@ aulaApp.directive("modal", ["versionApp", "$timeout", function (versionApp, $tim
           //   if(d.nombre === nombreBoton){
           //     return i;
           //   }
-          // });
-            
+          // });            
           
     //   var inventario = [
     //     {nombre: 'manzanas', cantidad: 2},

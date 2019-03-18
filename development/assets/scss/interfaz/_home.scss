@@ -7,6 +7,126 @@
 
 
 
+// background:#45B3E5;
+// background:#009AE0;
+// background:#7DC672; 
+// background:#45BB33;
+ // ======================================
+.movil-nav{
+	background: white;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	.cont-b{
+		height:33.33333333%;
+		display:flex;
+		.fott{
+			// background: rgba(255, 255, 255, 0.85);
+			// padding: 15px;
+			// margin-top: 10px;
+			z-index: 2;
+			margin-top: 15px;
+		}
+			
+		}
+		h2{
+			font-size: 15px;
+			color: white;
+			// color: #252a56;
+			font-weight: normal;
+			padding: 0;
+			margin: 5px 0 0 0;
+		}
+		span{
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 18px;
+			color: white;
+			// color: #E91E63;
+		}
+		p{
+			font-size: 60px;
+			color: white;
+			margin: 0;
+			padding: 0;
+		}
+		//
+		a{
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			-moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+  			-webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+   			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+		}
+		//
+		.b-inicio, .b-eje1, .b-eje2, .b-eje3, .b-eje4, .b-cierre{
+			img{
+				z-index: 0;
+				position: absolute;
+				opacity: 0.1;
+				min-width: 100%;
+			}
+		}
+		.b-inicio{
+			background: #FFB71C;			
+		}
+		.b-eje1{
+			background: #FF9B10;
+		}
+		.b-eje2{
+			background: #45B3E5;
+		}
+		.b-eje3{
+			background: #009AE0;
+		}
+		.b-eje4{
+			background: #7DC672;
+		}
+		.b-cierre{
+			background: #45BB33;
+		}
+	}
+// 
+@media screen and (orientation: landscape) and (max-width: 767px){
+	.movil-nav{
+		background: white;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		a{
+			text-align: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.fott{
+			text-align: left;
+			margin-left: 15px;
+		}
+		.b-inicio, .b-eje1, .b-eje2, .b-eje3, .b-eje4, .b-cierre{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+ 
+
+
+
+
+ //=======================================
+
  .aulaModulos{
     	position: absolute;
 	    color: $blanco;
@@ -63,7 +183,7 @@
   }
 }
 #Anavigator .Abarp:nth-of-type(5){
-  background:#7DC672;
+  background:#7DC672; 
   .ejen2 .guia{
   	border-left: 20px solid #009AE0;
   }

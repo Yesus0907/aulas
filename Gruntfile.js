@@ -1,34 +1,6 @@
 module.exports = function (grunt) {
 
 	grunt.initConfig({
-		watch: {
-			sass: {
-				files: ['development/assets/scss/**/*.scss'],
-				tasks: ['sass'],
-			}
-		},
-		//-------------------------------------------------------
-		sass: {
-			dev: {
-				options: {
-					style: 'expanded',
-					compass: true
-				},
-				files: {
-					'development/assets/css/av.css': 'development/assets/scss/main.scss'
-				}
-			},//sass dev
-			dist: {
-				options: {
-					style: 'compressed',
-					compass: true
-				},//sass dist
-				files: {
-					'build/assets/css/av.min.css': 'development/assets/scss/main.scss'
-				}
-			}
-		},
-		//-------------------------------------------------------
 		processhtml: {
 			dist: {
 				options: {
@@ -66,8 +38,6 @@ module.exports = function (grunt) {
 		},//processhtml
 		//-------------------------------------------------------
 		//-------------------------------------------------------
-
-
 		concat: {
 			js: {// compila plugins para aula virtual
 				src: [
@@ -111,7 +81,7 @@ module.exports = function (grunt) {
 					'development/assets/js/app/componentes/cierre/cierre.js',
 
 				],
-				dest: 'build/assets/js/av.min.js',
+				dest: 'build/assets/js/av.js',
 			},
 		},// concat
 		//-------------------------------------------------------
@@ -122,21 +92,17 @@ module.exports = function (grunt) {
 				},
 				options: {
 					report: 'min',
-					mangle: false
+					mangle: false,
+					compress:true
 				}
 			}
 		},//uglify
 
 	});
 	// cargar los plugin
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-processhtml');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-compass');
-
-	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('all', ['concat:js', 'processhtml', 'sass']);
+	grunt.registerTask('default', ['concat:js', 'uglify','processhtml']);
 	// grunt.registerTask('all', ['concat:js','uglify','processhtml','sass']);
 };

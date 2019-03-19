@@ -1,23 +1,26 @@
 {
-  "name": "aula-virtual",
-  "version": "2.0.0",
-  "description": "Aula virtual - Areandina",
-  "main": "gruntfile.js",
-  "author": "Fredy Morales",
-  "license": "ISC",
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-compass": "^1.1.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^3.1.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-processhtml": "^0.4.1"
-  },
-  "dependencies": {
-    "angular": "^1.5.7",
-    "angular-animate": "^1.5.7",
-    "angular-ui-router": "^0.4.2",
-    "jquery": "^3.2.1"
-  }
+	"name": "aula-virtual",
+	"version": "2.0.0",
+	"description": "Aula virtual - Areandina",
+	"main": "gruntfile.js",
+	"author": "Fredy Morales",
+	"license": "ISC",
+	"devDependencies": {
+		"grunt": "^1.0.3",
+		"grunt-contrib-concat": "^1.0.1",
+		"grunt-contrib-uglify": "^3.4.0",
+		"grunt-processhtml": "^0.4.2",
+		"node-sass": "^4.11.0"
+	},
+	"dependencies": {
+		"angular": "^1.5.7",
+		"angular-animate": "^1.5.7",
+		"angular-ui-router": "^0.4.2",
+		"jquery": "^3.2.1"
+	},
+	"scripts": {
+		"grunt": "grunt",
+		"watch": "node-sass --watch development/assets/scss/main.scss development/assets/css/av.css --output-style expanded",
+		"compile": "npm run grunt && node-sass development/assets/scss/main.scss build/assets/css/av.min.css --output-style compressed"
+	}
 }

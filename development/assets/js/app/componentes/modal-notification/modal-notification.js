@@ -23,9 +23,7 @@ aulaApp.directive("modalNotification", ["versionApp", function (versionApp) {
                     bodyClass: "modal-open",
                 });
             };
-            setTimeout(() => {
-                $scope.pdfModal();
-            }, 500);
+		  setTimeout(function(){ $scope.pdfModal(); }, 500);
 
             $scope.test = function (event) {
                 console.log("funciona")

@@ -1,6 +1,6 @@
 @import "../helpers/_variables";
 @import "../helpers/_functions";
-@import "compass/css3";
+
  // ======================================
  	// menu principal button
  //=======================================
@@ -654,14 +654,14 @@ body { width:100%; }
  
 ///======= animaciones
 
-@include keyframes(bounce) {
-	0%, 20%, 50%, 80%, 100% {
-    @include transform(translateY(0));
-  }
-	40% {
-    @include transform(translateY(-30px));
-  }
-	60% {
-    @include transform(translateY(-15px));
-  }
-}
+// @include keyframes(bounce) {
+// 	0%, 20%, 50%, 80%, 100% {
+//     @include transform(translateY(0));
+//   }
+// 	40% {
+//     @include transform(translateY(-30px));
+//   }
+// 	60% {
+//     @include transform(translateY(-15px));
+//   }
+// }

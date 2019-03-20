@@ -199,7 +199,7 @@ aulaApp.directive("modal", ["versionApp", "$timeout", function (versionApp, $tim
 					function find(element) {
 						return element.nombre == nombreBoton;
 					}
-					var obtenerId = b.findIndex(find);
+					var obtenerId = d.findIndex(find);
 
 					if (obtenerId < 1) {
 						return 0

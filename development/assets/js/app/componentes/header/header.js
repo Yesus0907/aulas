@@ -131,10 +131,10 @@ return {
             scrollToTop(1000);
         });
     },
-    //  templateUrl:function(){
-    //     return versionApp.apiUrl + "views/top-buttons.html"
-    // },
-     templateUrl:'top-buttons.html',
+     templateUrl:function(){
+        return versionApp.apiUrl + "views/top-buttons.html"
+    },
+     // templateUrl:'top-buttons.html',
 };
 }]);
 

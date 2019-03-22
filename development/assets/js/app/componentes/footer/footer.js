@@ -196,10 +196,10 @@ return {
           
       }
     },
-    //  templateUrl:function($element, controller, $scope, attrs){
-    //     return versionApp.apiUrl + "views/footer.html"
-    // },
-     templateUrl:'footer.html',
+     templateUrl:function($element, controller, $scope, attrs){
+        return versionApp.apiUrl + "views/footer.html"
+    },
+     // templateUrl:'footer.html',
     };
 }]);
 

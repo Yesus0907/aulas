@@ -32,9 +32,9 @@ return {
 
     
     },
-    // templateUrl:function($element, controller, $scope, attrs){
-    //     return versionApp.apiUrl + "views/nav-h-circulos.html"
-    // },
-     templateUrl:'nav-h-circulos.html',
+    templateUrl:function($element, controller, $scope, attrs){
+        return versionApp.apiUrl + "views/nav-h-circulos.html"
+    },
+     // templateUrl:'nav-h-circulos.html',
 };
 }]);

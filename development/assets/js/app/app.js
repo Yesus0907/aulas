@@ -57,7 +57,7 @@ aulaApp.constant('versionApp', {
 
     apiUrl: 'https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/'
 
-    // apiUrl: './assets/'
+//     apiUrl: './assets/'
 
 });
 //==================================================================
@@ -67,11 +67,12 @@ aulaApp.run(['$rootScope', function($rootScope) {
 
   window.parent.postMessage({message: 'startAv'}, 'https://areandina.instructure.com');
 
-  $rootScope.datosCanvas = [
-    {idCurso:'curso'},
-    {idUser:'user'},
-    {nameUser:'Estudiante'},
-  ];
+  $rootScope.datosCanvas = {
+    idCurso:'curso',
+    idUser:'user',
+    nameUser:'Estudiante',
+    mailUser:'user@mail.com',
+  };
 
     window.addEventListener('message', function(event, $rootscope) {
       if(event.origin === 'https://areandina.instructure.com')
@@ -81,7 +82,7 @@ aulaApp.run(['$rootScope', function($rootScope) {
 
           var idCurso = event.data.parameter;
           $rootScope.$apply(function () {
-            $rootScope.datosCanvas[0].idCurso = idCurso;
+            $rootScope.datosCanvas.idCurso = idCurso;
           });
 
           // console.log(idCurso);
@@ -90,7 +91,7 @@ aulaApp.run(['$rootScope', function($rootScope) {
           var idUser = event.data.parameter;
           // $rootScope.datosCanvas.push({idUser:idUser});
           $rootScope.$apply(function () {
-            $rootScope.datosCanvas[1].idUser = idUser;
+            $rootScope.datosCanvas.idUser = idUser;
           });
 
           // console.log(idUser);
@@ -99,7 +100,17 @@ aulaApp.run(['$rootScope', function($rootScope) {
           var nameUser = event.data.parameter;
           // $rootScope.datosCanvas.push({idUser:idUser});
           $rootScope.$apply(function () {
-            $rootScope.datosCanvas[2].nameUser = nameUser;
+            $rootScope.datosCanvas.nameUser = nameUser;
+          });
+
+          // console.log($rootScope.datosCanvas[1].nameUser);
+	   }
+	   else if(event.data.message == 'getMailUser'){
+
+          var mailUser = event.data.parameter;
+          // $rootScope.datosCanvas.push({idUser:idUser});
+          $rootScope.$apply(function () {
+            $rootScope.datosCanvas.mailUser = mailUser;
           });
 
           // console.log($rootScope.datosCanvas[1].nameUser);
@@ -118,9 +129,10 @@ aulaApp.factory('datosCanvas', ['$rootScope', function($rootScope) {
 
 
   return {
-      idCurso: $rootScope.datosCanvas[0].idCurso,
-      idUser: $rootScope.datosCanvas[1].idUser,
-      nameUser: $rootScope.datosCanvas[2].nameUser
+      idCurso: $rootScope.datosCanvas.idCurso,
+      idUser: $rootScope.datosCanvas.idUser,
+	 nameUser: $rootScope.datosCanvas.nameUser,
+	 mailUser: $rootScope.datosCanvas.mailUser
     };
 }]);
 

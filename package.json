@@ -6,6 +6,7 @@
 	"author": "Fredy Morales",
 	"license": "ISC",
 	"devDependencies": {
+		"concurrently": "^4.1.0",
 		"grunt": "^1.0.3",
 		"grunt-contrib-concat": "^1.0.1",
 		"grunt-contrib-uglify": "^3.4.0",
@@ -21,7 +22,10 @@
 	},
 	"scripts": {
 		"grunt": "grunt",
-		"watch": "live-server --open=development && node-sass --watch development/assets/scss/main.scss development/assets/css/av.css --output-style expanded",
-		"compile": "npm run grunt && node-sass development/assets/scss/main.scss build/assets/css/av.min.css --output-style compressed"
+		"build:sass": "node-sass -r --output-style compressed development/assets/scss/main.scss -o development/assets/css",
+		"build:sass-dev": "node-sass -r --output-style compressed development/assets/scss/main.scss build/assets/css/av.min.css -o",
+		"watch:sass": "npm run build:sass && npm run build:sass -- -w",
+		"watch": "concurrently \"npm run watch:sass\" \"live-server --open=development\"",
+		"compile": "concurrently \"npm run grunt\" \"npm run build:sass-dev\""
 	}
 }

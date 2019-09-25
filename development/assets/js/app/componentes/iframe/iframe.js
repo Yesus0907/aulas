@@ -31,7 +31,7 @@ return {
     link: function ($scope, $element, $index) {
 
     },
-     template:'<section class="row"><div class="video-responsive" ng-class="aspect()"><div ng-transclude ng-if="transcludeIn()"></div><object data="{{url}}" frameborder="0" allowfullscreen></object></div></section>',
+     template:'<section class="row"><div class="video-responsive" ng-class="aspect()"><div ng-transclude ng-if="transcludeIn()"></div><iframe src="{{url}}" frameborder="0" allowfullscreen></iframe></div></section>',
     
     transclude: true,
 };

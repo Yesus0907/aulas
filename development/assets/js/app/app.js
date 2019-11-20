@@ -24,6 +24,8 @@ var aulaApp = angular.module('aulaApp', [
 	// 'slickExampleApp',
 	// 'ironVimeoEmbed',
 ]);
+
+aulaConfig = createRoutes(config_global)
 aulaApp.config(['$sceProvider', function ($sceProvider) {
 	// Completely disable SCE.  For demonstration purposes only!
 	// Do not use in new projects or libraries.
@@ -64,7 +66,7 @@ aulaApp.constant('versionApp', {
 //==================================================================
 //-- consume datos de canvas
 //==================================================================
-aulaApp.run(['$rootScope', function ($rootScope) {
+aulaApp.run(['$rootScope', '$sce', function ($rootScope, $sce) {
 
 	window.parent.postMessage({ message: 'startAv' }, 'https://areandina.instructure.com');
 
@@ -75,7 +77,6 @@ aulaApp.run(['$rootScope', function ($rootScope) {
 		mailUser: 'user@mail.com',
 	};
 
-	$rootScope.config = config_global
 
 
 	window.addEventListener('message', function (event, $rootscope) {
@@ -128,8 +129,6 @@ aulaApp.run(['$rootScope', function ($rootScope) {
 }]);
 
 aulaApp.factory('datosCanvas', ['$rootScope', function ($rootScope) {
-
-
 	return {
 		idCurso: $rootScope.datosCanvas.idCurso,
 		idUser: $rootScope.datosCanvas.idUser,
@@ -216,7 +215,7 @@ aulaApp.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', 'gs
 		$urlRouterProvider.otherwise('/');
 
 		// configuracion home
-		console.log(config_global)
+
 
 
 		$stateProvider.state('home', {
@@ -259,131 +258,21 @@ aulaApp.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', 'gs
 			},
 		});
 
-		// configuracion inicio
-		$stateProvider.state('inicio', {
-			url: '/inicio',
-			views: {
-				main: {
-					templateUrl: 'referentes/inicio.html',
-					controller: 'inicioCtrl',
-				},
-			},
-			data: {
-				'gsapifyRouter.main': {
-					enter: {
-						in: {
-							transition: 'slideRight',
-							priority: 1,
-						},
-						out: {
-							transition: 'slideLeft',
-							priority: 1,
-						},
-					},
-					leave: {
-						in: {
-							transition: 'slideRight',
-							priority: 1,
-						},
-						out: {
-							transition: 'slideLeft',
-							priority: 1,
-						},
-					},
-				},
-			},
-		});
-
-		if (config_global) {
-			$count = config_global.cant
-			$types = config_global.type
-
-			for (var i = 0; i < $count; i++) {
-				var index = (i + 1)
-				$stateProvider.state(
-					$types + index,
-					{
-						url: '/' + $types + index,
-						views: {
-							main: {
-								templateUrl: 'referentes/eje' + index + '.html',
-								controller: $types + index + 'Ctrl'
-							}
-						},
-						data: {
-							'gsapifyRouter.main': {
-								enter: {
-									in: {
-										transition: 'slideRight',
-										priority: 1,
-									},
-									out: {
-										transition: 'slideLeft',
-										priority: 1,
-									},
-								},
-								leave: {
-									in: {
-										transition: 'slideRight',
-										priority: 1,
-									},
-									out: {
-										transition: 'slideLeft',
-										priority: 1,
-									},
-								},
-							},
-						},
-					})
-			}
-		}
-		// configuracion cierre
-		$stateProvider.state('cierre', {
-			url: '/cierre',
-			views: {
-				main: {
-					templateUrl: 'referentes/cierre.html',
-					controller: 'cierreCtrl',
-				},
-			},
-			data: {
-				'gsapifyRouter.main': {
-					enter: {
-						in: {
-							transition: 'slideRight',
-							priority: 1,
-						},
-						out: {
-							transition: 'slideLeft',
-							priority: 1,
-						},
-					},
-					leave: {
-						in: {
-							transition: 'slideRight',
-							priority: 1,
-						},
-						out: {
-							transition: 'slideLeft',
-							priority: 1,
-						},
-					},
-				},
-			},
-		});
+		initPagesRouters(aulaConfig, $stateProvider)
 	},
 ]);
-
+initControllers(aulaConfig)
 //==================================================================
 //-- define el controlador principal
 //==================================================================
 
-angular.module('MainCtrl', []).controller('MainCtrl', ['$element', '$scope', '$state', '$log', 'versionApp',
-	function ($element, $scope, $state, $log, versionApp) {
+angular.module('MainCtrl', []).controller('MainCtrl', ['$element', '$scope', '$state', '$log', 'versionApp', '$rootScope', '$sce',
+	function ($element, $scope, $state, $log, versionApp, $rootScope, $sce) {
 		console.log("****************************************");
 		console.log("*******" + " " + versionApp.appName + " " + "********");
 		console.log("****************" + " " + versionApp.appVersion + " " + "*****************");
 		console.log("****************************************");
+
 
 
 		//  $("body").on("click", ".btncurso", function () {
@@ -392,7 +281,9 @@ angular.module('MainCtrl', []).controller('MainCtrl', ['$element', '$scope', '$s
 		//  window.parent.postMessage({message: 'assignmentsToModal'}, 'https://areandina.instructure.com');
 		//  // window.parent.toModalLocal(href)
 		// });
-
+		$rootScope.config = createRoutes(config_global, $sce)
+		aulaConfig = $rootScope.config
+		$scope.configuration = $rootScope.config
 		$scope.$on('gsapifyRouter:enterStart', function (event, element, $rootScope) {
 
 		});
@@ -418,103 +309,64 @@ angular.module('MainCtrl', []).controller('MainCtrl', ['$element', '$scope', '$s
 		});
 	},
 ]);
+
+
+
+function initPagesRouters(aulaConfig, provider) {
+	aulaConfig.forEach(initRouter);
+	function initRouter(item, index, arr) {
+		var page = buildConfig(item, arr.length)
+
+		provider.state(
+			page.route,
+			{
+				url: '/' + page.route,
+				views: {
+					main: {
+						templateUrl: 'referentes/' + page.template + '.html',
+						controller: page.controller
+					}
+				},
+				data: {
+					'gsapifyRouter.main': {
+						enter: {
+							in: {
+								transition: 'slideRight',
+								priority: 1,
+							},
+							out: {
+								transition: 'slideLeft',
+								priority: 1,
+							},
+						},
+						leave: {
+							in: {
+								transition: 'slideRight',
+								priority: 1,
+							},
+							out: {
+								transition: 'slideLeft',
+								priority: 1,
+							},
+						},
+					},
+				},
+			})
+	}
+
+}
+
 //==================================================================
-//-- controladores de cada vista
+//-- Controllador Home
 //==================================================================
 
-aulaApp.controller('homeCtrl', ['$scope', '$sce',
-	function ($scope, $sce) {
+aulaApp.controller('homeCtrl', ['$scope', '$rootScope',
+	function ($scope, $rootScope) {
 		$scope.pageClass = 'home';
 		$scope.typeLabel = config_global.type_label
 		$scope.type = config_global.type
 
 
-		$count = config_global.cant
-		var iterator = []
-
-		$scope.listdefault = [
-			{
-				context: 'Nuestra pregunta',
-				background: $sce.trustAsHtml('Nues <br> tra <br> pre <br> gun <br>ta'),
-				context_open: $sce.trustAsHtml('Nuestra pregunta'),
-				icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png',
-				small_icon: 'icon-pregunta'
-			},
-			{
-				context: 'Evaluémonos',
-				background: $sce.trustAsHtml('eva <br> lue <br> mo <br> nos'),
-				context_open: 'Evaluémonos',
-				icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png',
-				small_icon: 'icon-lupa'
-			}
-		]
-		$scope.list = [
-
-			{
-				context: 'Conceptualicemos',
-				background: $sce.trustAsHtml('con <br> cep <br> tua<br> lice <br>mos'),
-				context_open: $sce.trustAsHtml('Conceptualicemos'),
-				icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png',
-				small_icon: 'icon-libro'
-			},
-			{
-				context: $sce.trustAsHtml('Analicemos la<br> situación'),
-				background: $sce.trustAsHtml('ana <br> lice <br> mos<br> la si<br>tua <br>cíon'),
-				context_open: $sce.trustAsHtml('Analicemos la<br> situación'),
-				icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png',
-				small_icon: 'icon-engranaje'
-			},
-			{
-				context: $sce.trustAsHtml('Pongamos en<br> práctica'),
-				background: $sce.trustAsHtml('pon <br> ga <br>mos <br> en <br> prác<br>tica '),
-				context_open: $sce.trustAsHtml('Pongamos en<br> práctica'),
-				icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png',
-				small_icon: 'icon-lego'
-			},
-			{
-				context: 'Propongamos',
-				background: $sce.trustAsHtml('pro <br> pon <br> ga <br> mos '),
-				context_open: $sce.trustAsHtml('Propongamos'),
-				icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png',
-				small_icon: 'icon-bombillo'
-			},
-
-		]
-		iterator.push(
-			{
-				index: 0,
-				type: 'inicio',
-				typeLabel: 'inicio',
-				type_context: config_global.type_context,
-				assets: $scope.listdefault[0]
-			}
-		)
-		for (var i = 0; i < ($count); i++) {
-			var index = (i + 1)
-
-			iterator.push(
-				{
-					index,
-					type: $scope.type,
-					typeLabel: $scope.typeLabel,
-					type_context: config_global.type_context,
-					assets: $scope.list[i]
-				}
-			)
-
-
-
-		}
-		iterator.push(
-			{
-				index: iterator.length + 1,
-				type: 'cierre',
-				typeLabel: 'Cierre',
-				type_context: config_global.type_context,
-				assets: $scope.listdefault[1]
-			}
-		)
-		console.log(iterator)
 		$scope.alert = function (state, $event) {
 			if (state == 'enter') {
 				setTimeout(() => {
@@ -530,84 +382,139 @@ aulaApp.controller('homeCtrl', ['$scope', '$sce',
 			}
 		}
 
-
-		$scope.homemenu = iterator
-
-		console.log($scope.homemenu)
+		$scope.homemenu = $rootScope.config
 	},
 ]);
 
-aulaApp.controller('inicioCtrl', ['$scope',
-	function ($scope) {
-		$scope.pageId = '1';
-		$scope.pageClass = 'page-inicio';
-		$scope.inicio = 'Nuestra pregunta - Inicio';
-
-	},
-]);
-
-if (config_global) {
-	$count = config_global.cant
-	$types = config_global.type
 
 
-	for (var i = 0; i < $count; i++) {
-		var index = (i + 1)
-		console.log(index)
-		test(index)
+
+
+//==================================================================
+//-- INICIAR CONTROLADORES INTERNOS
+//==================================================================
+function initControllers(aulaConfig) {
+	aulaConfig.forEach(initController);
+	function initController(item, index, arr) {
+		var page = buildConfig(item, arr.length)
+		aulaApp.controller(page.controller, ['$scope',
+			function ($scope) {
+				$scope.pageId = page.index;
+
+			},
+		]);
 	}
 }
-function prueba() {
-	console.log('test')
+
+//==================================================================
+//-- INICIAR CONTROLADORES INTERNOS
+//==================================================================
+function buildConfig(item, total) {
+	var index = item.index
+	var type = item.type
+	var controller = item.index === 0 || total === (index + 1) ? type + 'Ctrl' : type + index + 'Ctrl';
+	var route = item.index === 0 || total === (index + 1) ? type : type + index;
+	var template = item.index === 0 || total === (index + 1) ? type : 'eje' + index;
+
+	return {
+		index: index,
+		type: type,
+		controller: controller,
+		route: route,
+		template: template
+	}
 }
-function test() {
-	aulaApp.controller($types + index + 'Ctrl', ['$scope', '$log',
-		function ($scope) {
-			$scope.pageId = index;
+
+
+function createRoutes(data, $sce) {
+	var $count = data.cant
+	var iterator = []
+	var listdefault = [
+		{
+			context: 'Nuestra pregunta',
+			contextRaw: 'Nuestra pregunta',
+			background: 'Nues <br> tra <br> pre <br> gun <br>ta',
+			context_open: 'Nuestra pregunta',
+			icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png',
+			small_icon: 'icon-pregunta',
+			color: 'oscuro'
 		},
-	]);
+		{
+			context: 'Evaluémonos',
+			contextRaw: 'Evaluémonos',
+			background: 'eva <br> lue <br> mo <br> nos',
+			context_open: 'Evaluémonos',
+			icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png',
+			small_icon: 'icon-lupa',
+			color: 'oscuro'
+		}
+	]
+
+	var list = [
+		{
+			context: 'Conceptualicemos',
+			contextRaw: 'Conceptualicemos',
+			background: 'con <br> cep <br> tua<br> lice <br>mos',
+			context_open: 'Conceptualicemos',
+			icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png',
+			small_icon: 'icon-libro'
+		},
+		{
+			context: 'Analicemos la<br> situación',
+			contextRaw: 'Analicemos la situación',
+			background: 'ana <br> lice <br> mos<br> la si<br>tua <br>cíon',
+			context_open: 'Analicemos la<br> situación',
+			icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png',
+			small_icon: 'icon-engranaje'
+		},
+		{
+			context: 'Pongamos en<br> práctica',
+			contextRaw: 'Pongamos en práctica',
+			background: 'pon <br> ga <br>mos <br> en <br> prác<br>tica ',
+			context_open: 'Pongamos en<br> práctica',
+			icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png',
+			small_icon: 'icon-lego'
+		},
+		{
+			context: 'Propongamos',
+			contextRaw: 'Propongamos',
+			background: 'pro <br> pon <br> ga <br> mos ',
+			context_open: 'Propongamos',
+			icon: 'https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png',
+			small_icon: 'icon-bombillo'
+		},
+
+	]
+	iterator.push(
+		{
+			index: 0,
+			type: 'inicio',
+			typeLabel: 'inicio',
+			type_context: data.type_context,
+			assets: listdefault[0]
+		}
+	)
+	for (var i = 0; i < ($count); i++) {
+		var index = (i + 1)
+
+		iterator.push(
+			{
+				index,
+				type: data.type,
+				typeLabel: data.type_label,
+				type_context: config_global.type_context,
+				assets: list[i]
+			}
+		)
+	}
+	iterator.push(
+		{
+			index: iterator.length,
+			type: 'cierre',
+			typeLabel: 'Cierre',
+			type_context: data.type_context,
+			assets: listdefault[1]
+		}
+	)
+	return iterator
 }
-// aulaApp.controller('eje1Ctrl', ['$scope', '$log',
-// 	function ($scope, $log) {
-// 		$scope.pageId = '2';
-// 		$scope.pageClass = 'page-eje1';
-// 		$scope.eje1 = 'Conceptualicemos - Eje 1';
-
-// 	},
-// ]);
-
-// aulaApp.controller('eje2Ctrl', ['$scope', '$log',
-// 	function ($scope, $log) {
-// 		$scope.pageId = '3';
-// 		$scope.pageClass = 'page-eje2';
-// 		$scope.eje2 = 'Analicemos la situación - Eje 2';
-// 	},
-// ]);
-
-// aulaApp.controller('eje3Ctrl', ['$scope', '$log',
-// 	function ($scope, $log) {
-// 		$scope.pageId = '4';
-// 		$scope.pageClass = 'page-eje3';
-// 		$scope.eje3 = 'Pongamos en práctica - Eje 3';
-
-// 	},
-// ]);
-
-// aulaApp.controller('eje4Ctrl', ['$scope', '$log',
-// 	function ($scope, $log) {
-// 		$scope.pageId = '5';
-// 		$scope.pageClass = 'page-eje3';
-// 		$scope.eje3 = 'Pongamos en práctica - Eje 3';
-
-// 	},
-// ]);
-
-aulaApp.controller('cierreCtrl', ['$scope', '$log',
-	function ($scope, $log) {
-		$scope.pageId = '6';
-		$scope.pageClass = 'page-cierre';
-		$scope.cierre = 'Evaluémonos - Cierre';
-
-	},
-]);
-

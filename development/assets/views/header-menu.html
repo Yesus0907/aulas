@@ -1,30 +1,29 @@
 <div class="wrapper-header">
-	
 	<div class="headerMenu" style="background-image: url({{$ctrl.imagen}});" ng-if="!ifCierre()">
 		<span class="num-eje-deco"></span>
 		<div class="back"></div>
 		<div class="back2"></div>
 		<div class="wrapper-text">
-			<p class="num-eje">{{eje}}</p>
+			<p class="num-eje uppercase" ng-if="eje" ng-bind-html="eje"></p>
 			<p class="nombre-eje">{{nombreEje}}</p>
-			<h2 >{{$ctrl.titulo}}</h2>
+			<h2>{{$ctrl.titulo}}</h2>
 		</div>
 	</div>
-
 	<div class="headerMenu cierreHeader" style="background-image: url({{$ctrl.imagen}});" ng-if="ifCierre()">
 		<span class="num-eje-deco"></span>
 		<div class="back"></div>
 		<div class="back2"></div>
 		<div class="wrapper-text">
-			<p class="num-eje">{{eje}}</p>
+			<p class="num-eje uppercase" ng-bind-html="eje"></p>
 			<p class="nombre-eje">{{nombreEje}}</p>
 			<h1>¡ Felicidades !</h1>
-			<h2 >{{nombreUsuario}}</h2>
+			<h2>{{nombreUsuario}}</h2>
 			<p class="description">Has terminado el módulo <br> <span class="titulo">{{$ctrl.titulo}}</span></p>
 		</div>
 	</div>
-
-<!-- build:img https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/logos.svg -->
-	<div class="logos"><img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/logos.svg" alt=""></div>
-<!-- /build -->
+	<!-- build:img https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/logos.svg -->
+	<div class="logos"><img
+			src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/logos.svg"
+			alt=""></div>
+	<!-- /build -->
 </div>

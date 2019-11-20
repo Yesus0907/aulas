@@ -5,43 +5,55 @@
 angular
 	.module('headerMenuMod', ['headerMenuMod'])
 	.component('headerMenu', {
-		controller: function ($scope, versionApp, $rootScope) {
+		controller: function ($scope, versionApp, $rootScope, $sce) {
 			var vm = this;
 
 			$scope.nombreUsuario = $rootScope.datosCanvas.nameUser;
 
 			var vista = $(".areaContent").attr("data-state");
-
-			if (vista == "inicio") {
+			var config = $rootScope.config
+			var page = $.grep(config, function (item, i) {
+				var create = item.index === 0 || item.index === (config.length - 1) ? item.type : item.type + item.index
+				return (vista === create);
+			});
+			if (page[0].assets.color === 'oscuro') {
 				$(".guiadot , .headerMenu").addClass("oscuro");
-				$scope.eje = "INICIO";
-				$scope.nombreEje = "Pregunta";
-
-			} else if (vista == "eje1") {
+			} else {
 				$(".guiadot , .headerMenu").removeClass("oscuro");
-				$scope.eje = "EJE 1";
-				$scope.nombreEje = "Conceptualicemos";
-
-			} else if (vista == "eje2") {
-				$(".guiadot , .headerMenu").removeClass("oscuro");
-				$scope.eje = "EJE 2";
-				$scope.nombreEje = "Analicemos";
-
-			} else if (vista == "eje3") {
-				$(".guiadot , .headerMenu").removeClass("oscuro");
-				$scope.eje = "EJE 3";
-				$scope.nombreEje = "Pongamos en práctica";
-
-			} else if (vista == "eje4") {
-				$(".guiadot , .headerMenu").removeClass("oscuro");
-				$scope.eje = "EJE 4";
-				$scope.nombreEje = "Propongamos";
-
-			} else if (vista == "cierre") {
-				$(".guiadot , .headerMenu").addClass("oscuro");
-				$scope.eje = "CIERRE";
-				$scope.nombreEje = "Evaluémonos";
 			}
+			$scope.eje = page[0].type;
+			$scope.nombreEje = page[0].assets.contextRaw;
+			console.log(page)
+			// if (vista == page[0].type) {
+
+			// 	$scope.eje = page[0].type;
+			// 	$scope.nombreEje = "Pregunta";
+
+			// } else if (vista == page[0].type + "1") {
+			// 	$(".guiadot , .headerMenu").removeClass("oscuro");
+			// 	$scope.eje = "EJE 1";
+			// 	$scope.nombreEje = "Conceptualicemos";
+
+			// } else if (vista == page[0].type + "2") {
+			// 	$(".guiadot , .headerMenu").removeClass("oscuro");
+			// 	$scope.eje = "EJE 2";
+			// 	$scope.nombreEje = "Analicemos";
+
+			// } else if (vista == page[0].type + "3") {
+			// 	$(".guiadot , .headerMenu").removeClass("oscuro");
+			// 	$scope.eje = "EJE 3";
+			// 	$scope.nombreEje = "Pongamos en práctica";
+
+			// } else if (vista == page[0].type + "4") {
+			// 	$(".guiadot , .headerMenu").removeClass("oscuro");
+			// 	$scope.eje = "EJE 4";
+			// 	$scope.nombreEje = "Propongamos";
+
+			// } else if (vista == page[0].type) {
+			// 	$(".guiadot , .headerMenu").addClass("oscuro");
+			// 	$scope.eje = "CIERRE";
+			// 	$scope.nombreEje = "Evaluémonos";
+			// }
 			$scope.ifCierre = function () {
 				if (vista == "cierre") {
 					return true
@@ -57,10 +69,10 @@ angular
 			autorNombre: "@",
 			autorDescripcion: "@",
 		},
-		// templateUrl:function(versionApp){
-		//      return versionApp.apiUrl + "views/header-menu.html"
-		//  },
-		templateUrl: 'header-menu.html',
+		templateUrl: function (versionApp) {
+			return versionApp.apiUrl + "views/header-menu.html"
+		},
+		// templateUrl: 'header-menu.html',
 	});
 
 

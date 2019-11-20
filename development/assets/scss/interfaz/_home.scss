@@ -1,657 +1,713 @@
 @import "../helpers/_variables";
 @import "../helpers/_functions";
 
- // ======================================
- 	// menu principal button
- //=======================================
+// ======================================
+// menu principal button
+//=======================================
 
+.change {
+     border-left: 20px solid #03304a !important;
 
+}
+
+.open-item {
+     width: 40% !important;
+}
+
+.close-item {
+     width: inherit;
+}
 
 // background:#45B3E5;
 // background:#009AE0;
 // background:#7DC672; 
 // background:#45BB33;
- // ======================================
-.movil-nav{
-	background: white;
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	.cont-b{
-		height:33.33333333%;
-		display:flex;
-		.fott{
-			// background: rgba(255, 255, 255, 0.85);
-			// padding: 15px;
-			// margin-top: 10px;
-			z-index: 2;
-			margin-top: 15px;
-		}
-			
-		}
-		h2{
-			font-size: 15px;
-			color: white;
-			// color: #252a56;
-			font-weight: normal;
-			padding: 0;
-			margin: 5px 0 0 0;
-		}
-		span{
-			text-transform: uppercase;
-			font-weight: bold;
-			font-size: 18px;
-			color: white;
-			// color: #E91E63;
-		}
-		p{
-			font-size: 60px;
-			color: white;
-			margin: 0;
-			padding: 0;
-		}
-		//
-		a{
-			padding: 0;
-			margin: 0;
-			text-align: center;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			overflow: hidden;
-			-moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
-  			-webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
-   			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
-		}
-		//
-		.b-inicio, .b-eje1, .b-eje2, .b-eje3, .b-eje4, .b-cierre{
-			img{
-				z-index: 0;
-				position: absolute;
-				opacity: 0.1;
-				min-width: 100%;
-			}
-		}
-		.b-inicio{
-			background: #FFB71C;			
-		}
-		.b-eje1{
-			background: #FF9B10;
-		}
-		.b-eje2{
-			background: #45B3E5;
-		}
-		.b-eje3{
-			background: #009AE0;
-		}
-		.b-eje4{
-			background: #7DC672;
-		}
-		.b-cierre{
-			background: #45BB33;
-		}
-	}
+// ======================================
+.movil-nav {
+     background: white;
+     height: 100%;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+
+     .cont-b {
+          height: 33.33333333%;
+          display: flex;
+
+          .fott {
+               // background: rgba(255, 255, 255, 0.85);
+               // padding: 15px;
+               // margin-top: 10px;
+               z-index: 2;
+               margin-top: 15px;
+          }
+
+     }
+
+     h2 {
+          font-size: 15px;
+          color: white;
+          // color: #252a56;
+          font-weight: normal;
+          padding: 0;
+          margin: 5px 0 0 0;
+     }
+
+     span {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 18px;
+          color: white;
+          // color: #E91E63;
+     }
+
+     p {
+          font-size: 60px;
+          color: white;
+          margin: 0;
+          padding: 0;
+     }
+
+     //
+     a {
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          -moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+          -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15);
+     }
+
+     //
+     .b-inicio,
+     .b-eje1,
+     .b-eje2,
+     .b-eje3,
+     .b-eje4,
+     .b-cierre {
+          img {
+               z-index: 0;
+               position: absolute;
+               opacity: 0.1;
+               min-width: 100%;
+          }
+     }
+
+     .b-inicio {
+          background: #FFB71C;
+     }
+
+     .b-eje1 {
+          background: #FF9B10;
+     }
+
+     .b-eje2 {
+          background: #45B3E5;
+     }
+
+     .b-eje3 {
+          background: #009AE0;
+     }
+
+     .b-eje4 {
+          background: #7DC672;
+     }
+
+     .b-cierre {
+          background: #45BB33;
+     }
+}
+
 // 
-@media screen and (orientation: landscape) and (max-width: 767px){
-	.movil-nav{
-		background: white;
-		height: 100%;
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		a{
-			text-align: center;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-		}
-		.fott{
-			text-align: left;
-			margin-left: 15px;
-		}
-		.b-inicio, .b-eje1, .b-eje2, .b-eje3, .b-eje4, .b-cierre{
-			img{
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
+@media screen and (orientation: landscape) and (max-width: 767px) {
+     .movil-nav {
+          background: white;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+
+          a {
+               text-align: center;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .fott {
+               text-align: left;
+               margin-left: 15px;
+          }
+
+          .b-inicio,
+          .b-eje1,
+          .b-eje2,
+          .b-eje3,
+          .b-eje4,
+          .b-cierre {
+               img {
+                    width: 100%;
+                    height: auto;
+               }
+          }
+     }
 }
- 
 
 
 
 
- //=======================================
 
- .aulaModulos{
-    	position: absolute;
-	    color: $blanco;
-	    padding: 0;
-	    top: 20vh;
-	    overflow: hidden;
-	    height: 100px;
-	     @include media("<=600px") {
-               top: 13vh;
-     	}
-			a{
-				    color: $blanco;
-				    margin-right: 0;
-				    background: rgba(62, 192, 50, 0.88);
-				    text-decoration: none;
-				    padding: 27px 33px;
-				    border-radius: 5px;
-				    position: relative;
-				    display: block;
-				    border: 2px solid $blanco;
-			}
-			span{
-				font-size: 30px;
-			    margin-right: 0;
-			    
-    			color:$blanco;
-    			@include prefix((
-					transition: .2s all ease-in-out
-				), webkit moz);
-			}
+//=======================================
+
+.aulaModulos {
+     position: absolute;
+     color: $blanco;
+     padding: 0;
+     top: 20vh;
+     overflow: hidden;
+     height: 100px;
+
+     @include media("<=600px") {
+          top: 13vh;
+     }
+
+     a {
+          color: $blanco;
+          margin-right: 0;
+          background: rgba(62, 192, 50, 0.88);
+          text-decoration: none;
+          padding: 27px 33px;
+          border-radius: 5px;
+          position: relative;
+          display: block;
+          border: 2px solid $blanco;
+     }
+
+     span {
+          font-size: 30px;
+          margin-right: 0;
+
+          color: $blanco;
+          @include prefix((transition: .2s all ease-in-out), webkit moz);
+     }
 }
-#Anavigator .Abarp:nth-of-type(1){
-  background:#FFB71C;
-  .ejen2 .guia{
-  	border-left: 20px solid transparent;
-  }
+
+#Anavigator .Abarp:nth-of-type(1) {
+     background: #FFB71C;
+
+     .ejen2 .guia {
+          border-left: 20px solid transparent;
+     }
 }
-#Anavigator .Abarp:nth-of-type(2){
-  background:#FF9B10;
-  .ejen2 .guia{
-  	border-left: 20px solid #FFB71C;
-  }
+
+#Anavigator .Abarp:nth-of-type(2) {
+     background: #FF9B10;
+
+     .ejen2 .guia {
+          border-left: 20px solid #FFB71C;
+     }
 }
-#Anavigator .Abarp:nth-of-type(3){
-  background:#45B3E5;
-  .ejen2 .guia{
-  	border-left: 20px solid #FF9B10;
-  }
+
+#Anavigator .Abarp:nth-of-type(3) {
+     background: #45B3E5;
+
+     .ejen2 .guia {
+          border-left: 20px solid #FF9B10;
+     }
 }
-#Anavigator .Abarp:nth-of-type(4){
-  background:#009AE0;
-  .ejen2 .guia{
-  	border-left: 20px solid #45B3E5;
-  }
+
+#Anavigator .Abarp:nth-of-type(4) {
+     background: #009AE0;
+
+     .ejen2 .guia {
+          border-left: 20px solid #45B3E5;
+     }
 }
-#Anavigator .Abarp:nth-of-type(5){
-  background:#7DC672; 
-  .ejen2 .guia{
-  	border-left: 20px solid #009AE0;
-  }
+
+#Anavigator .Abarp:nth-of-type(5) {
+     background: #7DC672;
+
+     .ejen2 .guia {
+          border-left: 20px solid #009AE0;
+     }
 }
-#Anavigator .Abarp:nth-of-type(6){
-  background:#45BB33;
-  .ejen2 .guia{
-  	border-left: 20px solid #7DC672;
-  }
+
+#Anavigator .Abarp:nth-of-type(6) {
+     background: #45BB33;
+
+     .ejen2 .guia {
+          border-left: 20px solid #7DC672;
+     }
 }
+
 // ======================================
- 	//****** variables locales
-	$backwhite:rgba(255, 255, 255, 0.75);
- //=======================================
- // ======================================
- 	//****** mide ancho columnas
-	$width: 100%;
-	$space: $width / 6; //= 20px
-	$height: 100%;
-	$spaceH: $height / 6; //= 20px
- //=======================================
-  // ======================================
- 	//****** helper class
-	// .hidden{overflow:hidden;}
- //=======================================
+//****** variables locales
+$backwhite:rgba(255, 255, 255, 0.75);
+//=======================================
+// ======================================
+//****** mide ancho columnas
+$width: 100%;
+$space: $width / 6; //= 20px
+$height: 100%;
+$spaceH: $height / 6; //= 20px
+//=======================================
+// ======================================
+//****** helper class
+// .hidden{overflow:hidden;}
+//=======================================
 
 // ======================================
- 	//****** Elementos por defecto
- //=======================================
-#wrapppernav{
-	position: fixed;
-	width: 100vw;
-	overflow:hidden;
-	z-index: 3;
-	height:$height;
+//****** Elementos por defecto
+//=======================================
+#wrapppernav {
+     position: fixed;
+     width: 100vw;
+     overflow: hidden;
+     z-index: 3;
+     height: $height;
 }
- // ======================================
- 	// principal colores
- //=======================================
-#Anavigator{
-	flex-wrap: wrap;
-	 display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+// ======================================
+// principal colores
+//=======================================
+#Anavigator {
+     flex-wrap: wrap;
+     display: -webkit-box;
+     /* OLD - iOS 6-, Safari 3.1-6 */
+     display: -moz-box;
+     /* OLD - Firefox 19- (buggy but mostly works) */
+     display: -ms-flexbox;
+     /* TWEENER - IE 10 */
+     display: -webkit-flex;
+     /* NEW - Chrome */
+     display: flex;
+     /* NEW, Spec - Opera 12.1, Firefox 20+ */
      flex-direction: column;
      justify-content: stretch;
-     height:$height;
-	@include media(">=desktop") {
-		   		flex-wrap: nowrap;
-		   		flex-direction: row;
-		} 
-	.Abarp{
-		height:$spaceH;
-		width:100%;
-		overflow: hidden;
-		@include media(">=desktop") {
-			margin-left:-1px;
-			-webkit-transition-property :width, background;
-		  	-moz-transition-property    :width, background;
-		  	-ms-transition-property     :width, background;
-			transition-property:width, background;
-			-webkit-transition-timing-function :cubic-bezier(0.645, 0.045, 0.355, 1);
-		  	-moz-transition-timing-function   :cubic-bezier(0.645, 0.045, 0.355, 1);
-		  	-ms-transition-timing-function    :cubic-bezier(0.645, 0.045, 0.355, 1);
-			transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
-			-webkit-transition-duration :.5s, .2s;
-		  	-moz-transition-duration  :.5s, .2s;
-		  	-ms-transition-duration   :.5s, .2s;
-			transition-duration:.5s, .2s;
-			// @include prefix((
-			// 	transition: .5s width cubic-bezier(0.645, 0.045, 0.355, 1)
-			// ), webkit moz);
-			@include prefix((
-				transition-delay: .1s
-			), webkit moz);
-		   	@include prefix((
-				translate3d(0,0,0) 
-			), webkit moz);
-			width:16.77778%;
-			height: 100vh;
-		} 
-	}
-	a{
-		height:$height;
-		display: block;
-		text-decoration:none;
-		position: relative;
-		@include media(">=desktop") {
-			height:100vh;
-		}
-	}
-	img{
-		border: none;
-		max-width: 350px;
-		height:auto;
-		// position: absolute;
-		// left: 50%;
-		// top: 50%;
-		opacity:0;
-		@include centerer(true, true);
-		// @include prefix((
-		// 	 transform: translate3d(-50%,-50%,0) 
-		// ), webkit moz);
-		@include prefix((
-			transition-delay: .1s
-		), webkit moz);
-		@include prefix((
-			transition: .3s opacity cubic-bezier(0.645, 0.045, 0.355, 1)
-		), webkit moz);
-		// -webkit-transition-property :opacity, transform;
-	 //  	-moz-transition-property    :opacity, transform;
-	 //  	-ms-transition-property     :opacity, transform;
-		// transition-property:opacity, transform;
-		// -webkit-transition-timing-function :cubic-bezier(0.645, 0.045, 0.355, 1);
-	 //  	-moz-transition-timing-function   :cubic-bezier(0.645, 0.045, 0.355, 1);
-	 //  	-ms-transition-timing-function    :cubic-bezier(0.645, 0.045, 0.355, 1);
-		// transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
-		// -webkit-transition-duration :.3s, .6s;
-	 //  	-moz-transition-duration  :.3s, .6s;
-	 //  	-ms-transition-duration   :.3s, .6s;
-		// transition-duration:.3s, .6s;			  
-	}
-	.textF{
-		font-family: areandina;
-		color: rgba(255, 255, 255, 0.04);
-		font-size: 13vw;
-		line-height: 16vh;
-		 @include centerer(true, true);
-		text-transform: uppercase;
-		opacity:0;
-	}
-}
-.Imodulo{
-	position: absolute;
-	bottom: 83px;
-    right: 101px;
-	font-family: BrownStd;
-	font-weight: bold;
-		p{
-			display:inline-block;
-		}
-		& p:nth-of-type(1){
-			color: $blanco;
-			opacity:0;
-			@include prefix((
-				transition: .3s all ease-in-out
-			), webkit moz);
-			@include prefix((
-				transform: translateX(-55px)
-			), webkit moz);
-			@include prefix((
-				transition-delay: .3s
-			), webkit moz);
-			text-transform:uppercase;
-			white-space: nowrap;
-		}
-		& p:nth-of-type(2){
-			font-size: 33px;
-		    color: #3EC032;
-		    position: absolute;
-		    top: 4px;
-		    right: -46px;
-		    opacity:0;
-		    @include prefix((
-				transition: .7s all ease-in-out
-			), webkit moz);
-			@include prefix((
-				transition-delay: .3s
-			), webkit moz);
-			@include prefix((
-				transform: translateX(-47px)
-			), webkit moz);	
-		}	
-}
+     height: $height;
 
-#Abar3 .textF, #Abar4 .textF{
-	font-size: 11vw !important;
-	line-height: 14vh !important;
-}
-// ======================================
- 	//****** estado oculto menu principla(azul)
- //=======================================
-#Anavigator .ejen1{
-	position: absolute;
-    margin: auto;
-    width: 100%;
-    opacity:0;
-    top:5%;
-    height:$height;
-     @include prefix((
-			transition: .4s opacity ease-in-out
-	), webkit moz);
-    div{
- 		position: relative;
- 		display: block;
- 		@include centerer(true, false);
- 		height: 80px;
- 		width: 100%;
- 	}
- 	div span{
-		@include centerer(true, true);
-	    background: red;
-	    width: 115px;
-	    height: 35px;
-	    background: #af1764;
-	    border-radius: 5px;
-	     @include prefix((
-			transform-origin: center
-		), webkit moz);
-	    margin-top: 9px;
-	    opacity: .9;
- 	}
- 	div span:before{
-		width: 149px;
-	    height: 35px;
-	    background: #ca126f;
-	    border-radius: 5px;
-	    top: -4px;
-	    right: -18px;
-	    position: absolute;
-	    content:"";
-}
- 	
- 	div span:after{
-	    content: "";
-	    position: absolute;
-	    width: 111px;
-	    height: 35px;
-	    /* background: red; */
-	    background: #e2147d;
-	    border-radius: 5px;
-	    top: -9px;
-	    left: 3px;
- 	}
-	.hesag{
-			// @include esagono(40px, $magentaInsti, 0);
-	}
-	.textEje{
-			color:$blanco;
-			font-family:BrownStd;
-			font-weight:bold;
-			position: absolute;
-		    z-index: 1;
-		   @include centerer(true, true);
-		   font-size: 15px;
-		    border-radius: 50px;
-	}
-	h2{
-			font-family:areandina;
-			color:$blanco;
-			text-transform:uppercase;
-			text-align: center;
-		    top: 79px;
-		    position: absolute;
-		    font-size: 35px;
-		    @include centerer(true, false);
-		    white-space: nowrap;
-	}
-}
-// ======================================
- 	//****** estado visible menu principal (gris)
- //=======================================
-#Anavigator .ejen2{
-	
-	position: relative;
-    width: 100%;
-    z-index: 2;
-    height: $height;
-    background: transparent;
      @include media(">=desktop") {
-     	 height: 100vh;
+          flex-wrap: nowrap;
+          flex-direction: row;
      }
-    	div{
-    		position: absolute;
-			    z-index: 3;
-			    width: 100%;
-			    text-align: left;
-			    
-			    left:20px;
-		    @include media(">=desktop") {
-			    text-align: center;
-			    bottom:24px;
-			    @include centerer(true, false);
-			    @include prefix((
-					transition: .2s all ease-in-out
-				), webkit moz);
-			} 
-    	}
-    	.guia{
-    		width: 0;
-			height: 0;
-			border-top: 20px solid transparent;
-			border-bottom: 20px solid transparent;
-			border-left: 20px solid ;
-			position: absolute;
-			top:45%;
-			 @include prefix((
-					 	    transform: translate(0, -50%) 
-					  ), webkit moz);
-			 opacity:1;
-			 @include prefix((
-					 	    transition: .5s opacity ease-in-out
-					  ), webkit moz);
 
-    	}
-    	.guia.oculto{
-			opacity:0;
-			
-    	}
-    	.icon-p{
-    		
-    		color:$blanco;
-    		font-size: 5em;
-			opacity:1;
-			top: 50%;
-    		left: 80%;
-    		position: absolute;
-    		@include prefix((
-				transform:translate(-50%, -50%)
-			), webkit moz);
-			@include media(">=desktop") {
-				font-size: 9em;
-				margin-top: -55px;
-				@include prefix((
-					 transition: .25s all ease-in-out
-				), webkit moz);
-				 @include centerer(true, true);
-			}
-    	}
-		.hesag{
-			position: absolute;
-		    background: rgba(255, 255, 255, 1);
-		    width: 250px;
-		    height: 1000px;
-		    left:24vw;
-		    @include prefix((
-					 	    transform:translate(-50%, -50%) rotate(-8deg) 
-			), webkit moz);
-			    @include media(">=desktop") {
-					background: rgba(255, 255, 255, 0.9);
-					top: 93vh;
-					left:50%;
-					@include prefix((
-							transform: translate3d(0,0,0) translate(-50%, -50%) rotate(-100deg) 
-					), webkit moz);
-					@include prefix((
-							transition: .16s all ease-in-out
-					), webkit moz);
-				} 
-		}
-		.hesag:before{
-			content:"";
-			width: 6px;
-		    height:1300px;
-		    background: rgba(255, 255, 255, 0.75);
-		    position: absolute;
-		    top: 0;
-		    left: -10px
-		}
-		.hesag:after{
-			content:"";
-			width: 6px;
-		    height: 1300px;
-		    background: rgba(255, 255, 255, 0.75);
-		    position: absolute;
-		    top: 0;
-		    right: -10px;
-		}
-		.textEje{
-			color:$magentaInsti;
-			font-family:BrownStd;
-			font-weight:bold;
-		    z-index: 1;
-		    font-size:20px;
-		    text-transform:uppercase;
-		    @include media(">=desktop") {
-		    	font-size: 25px;
-		    }
-		}
-		h2{
-			font-family: BrownStd;
-		    color: #03304A;
-		    text-transform: uppercase;
-		    font-weight: bold;
-		    font-size: 12px;
-		    margin-top: 6px;
-		    white-space: nowrap;
-		    @include media(">=desktop") {
-		    	font-size: 15px;
-		    }
-		}
+     .Abarp {
+          height: $spaceH;
+          width: 100%;
+          overflow: hidden;
+
+          @include media(">=desktop") {
+               margin-left: -1px;
+               -webkit-transition-property: width, background;
+               -moz-transition-property: width, background;
+               -ms-transition-property: width, background;
+               transition-property: width, background;
+               -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+               -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+               -ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+               transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+               -webkit-transition-duration: .5s, .2s;
+               -moz-transition-duration: .5s, .2s;
+               -ms-transition-duration: .5s, .2s;
+               transition-duration: .5s, .2s;
+               // @include prefix((
+               // 	transition: .5s width cubic-bezier(0.645, 0.045, 0.355, 1)
+               // ), webkit moz);
+               @include prefix((transition-delay: .1s), webkit moz);
+               @include prefix((translate3d(0, 0, 0)), webkit moz);
+               height: 100vh;
+          }
+     }
+
+     a {
+          height: $height;
+          display: block;
+          text-decoration: none;
+          position: relative;
+
+          @include media(">=desktop") {
+               height: 100vh;
+          }
+     }
+
+     img {
+          border: none;
+          max-width: 350px;
+          height: auto;
+          // position: absolute;
+          // left: 50%;
+          // top: 50%;
+          opacity: 0;
+          @include centerer(true, true);
+          // @include prefix((
+          // 	 transform: translate3d(-50%,-50%,0) 
+          // ), webkit moz);
+          @include prefix((transition-delay: .1s), webkit moz);
+          @include prefix((transition: .3s opacity cubic-bezier(0.645, 0.045, 0.355, 1)), webkit moz);
+          // -webkit-transition-property :opacity, transform;
+          //  	-moz-transition-property    :opacity, transform;
+          //  	-ms-transition-property     :opacity, transform;
+          // transition-property:opacity, transform;
+          // -webkit-transition-timing-function :cubic-bezier(0.645, 0.045, 0.355, 1);
+          //  	-moz-transition-timing-function   :cubic-bezier(0.645, 0.045, 0.355, 1);
+          //  	-ms-transition-timing-function    :cubic-bezier(0.645, 0.045, 0.355, 1);
+          // transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+          // -webkit-transition-duration :.3s, .6s;
+          //  	-moz-transition-duration  :.3s, .6s;
+          //  	-ms-transition-duration   :.3s, .6s;
+          // transition-duration:.3s, .6s;			  
+     }
+
+     .textF {
+          font-family: areandina;
+          color: rgba(255, 255, 255, 0.04);
+          font-size: 13vw;
+          line-height: 16vh;
+          @include centerer(true, true);
+          text-transform: uppercase;
+          opacity: 0;
+     }
 }
- // ======================================
-	//****** Estado hover menu
- //=======================================
 
-#Anavigator .Abarp.animated{
-		background: #03304a;
-		width: 40%;
-		img{
-			// @include prefix((
-			// 	transform: translate3d(-50%, -45%, 0) 
-			// ), webkit moz);
-			opacity:1;
-		}
-		.ejen2 .hesag{
-			opacity:0;
-			@include prefix((
-					 	    transform: translate3d(0,0,0) translate(20%, -50%) rotate(-100deg) 
-			), webkit moz);
-		}
-		.ejen2 div{
-			@include prefix((
-				 transform:translate(-50%, -150%)
-			), webkit moz);
-			opacity:0;
-		}
-		.ejen2 .icon-p{
-    		
-			opacity:0;
-    	}
-    	.ejen2 .guia{
-			opacity:0;
-    	}
-  
-		.ejen1 {
-			opacity:1;
-		}
-		.Imodulo{
-			& p:nth-of-type(1){
-				opacity:1;
-				@include prefix((
-					transform: translateX(1px)
-			), webkit moz);
-			}
-			& p:nth-of-type(2){
-				opacity:1;
-				@include prefix((
-					transform: translateX(1px)
-			), webkit moz);
-			}
-		}
-		.textF{
-			opacity:1;
-		}
-	}
+.Imodulo {
+     position: absolute;
+     bottom: 83px;
+     right: 101px;
+     font-family: BrownStd;
+     font-weight: bold;
+
+     p {
+          display: inline-block;
+     }
+
+     & p:nth-of-type(1) {
+          color: $blanco;
+          opacity: 0;
+          @include prefix((transition: .3s all ease-in-out), webkit moz);
+          @include prefix((transform: translateX(-55px)), webkit moz);
+          @include prefix((transition-delay: .3s), webkit moz);
+          text-transform: uppercase;
+          white-space: nowrap;
+     }
+
+     & p:nth-of-type(2) {
+          font-size: 33px;
+          color: #3EC032;
+          position: absolute;
+          top: 4px;
+          right: -46px;
+          opacity: 0;
+          @include prefix((transition: .7s all ease-in-out), webkit moz);
+          @include prefix((transition-delay: .3s), webkit moz);
+          @include prefix((transform: translateX(-47px)), webkit moz);
+     }
+}
+
+#Abar3 .textF,
+#Abar4 .textF {
+     font-size: 11vw !important;
+     line-height: 14vh !important;
+}
+
+// ======================================
+//****** estado oculto menu principla(azul)
+//=======================================
+#Anavigator .ejen1 {
+     position: absolute;
+     margin: auto;
+     width: 100%;
+     opacity: 0;
+     top: 5%;
+     height: $height;
+     @include prefix((transition: .4s opacity ease-in-out), webkit moz);
+
+     div {
+          position: relative;
+          display: block;
+          @include centerer(true, false);
+          height: 80px;
+          width: 100%;
+     }
+
+     div span {
+          @include centerer(true, true);
+          background: red;
+          width: 115px;
+          height: 35px;
+          background: #af1764;
+          border-radius: 5px;
+          @include prefix((transform-origin: center), webkit moz);
+          margin-top: 9px;
+          opacity: .9;
+     }
+
+     div span:before {
+          width: 149px;
+          height: 35px;
+          background: #ca126f;
+          border-radius: 5px;
+          top: -4px;
+          right: -18px;
+          position: absolute;
+          content: "";
+     }
+
+     div span:after {
+          content: "";
+          position: absolute;
+          width: 111px;
+          height: 35px;
+          /* background: red; */
+          background: #e2147d;
+          border-radius: 5px;
+          top: -9px;
+          left: 3px;
+     }
+
+     .hesag {
+          // @include esagono(40px, $magentaInsti, 0);
+     }
+
+     .textEje {
+          color: $blanco;
+          font-family: BrownStd;
+          font-weight: bold;
+          position: absolute;
+          z-index: 1;
+          @include centerer(true, true);
+          font-size: 15px;
+          border-radius: 50px;
+     }
+
+     h2 {
+          font-family: areandina;
+          color: $blanco;
+          text-transform: uppercase;
+          text-align: center;
+          top: 79px;
+          position: absolute;
+          font-size: 35px;
+          @include centerer(true, false);
+          white-space: nowrap;
+     }
+}
+
+// ======================================
+//****** estado visible menu principal (gris)
+//=======================================
+#Anavigator .ejen2 {
+
+     position: relative;
+     width: 100%;
+     z-index: 2;
+     height: $height;
+     background: transparent;
+
+     @include media(">=desktop") {
+          height: 100vh;
+     }
+
+     div {
+          position: absolute;
+          z-index: 3;
+          width: 100%;
+          text-align: left;
+
+          left: 20px;
+
+          @include media(">=desktop") {
+               text-align: center;
+               bottom: 24px;
+               @include centerer(true, false);
+               @include prefix((transition: .2s all ease-in-out), webkit moz);
+          }
+     }
+
+     .guia {
+          width: 0;
+          height: 0;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 20px solid;
+          position: absolute;
+          top: 45%;
+          @include prefix((transform: translate(0, -50%)), webkit moz);
+          opacity: 1;
+          @include prefix((transition: .5s opacity ease-in-out), webkit moz);
+
+     }
+
+     .guia.oculto {
+          opacity: 0;
+
+     }
+
+     .icon-p {
+
+          color: $blanco;
+          font-size: 5em;
+          opacity: 1;
+          top: 50%;
+          left: 80%;
+          position: absolute;
+          @include prefix((transform:translate(-50%, -50%)), webkit moz);
+
+          @include media(">=desktop") {
+               font-size: 9em;
+               margin-top: -55px;
+               @include prefix((transition: .25s all ease-in-out), webkit moz);
+               @include centerer(true, true);
+          }
+     }
+
+     .hesag {
+          position: absolute;
+          background: rgba(255, 255, 255, 1);
+          width: 250px;
+          height: 1000px;
+          left: 24vw;
+          @include prefix((transform:translate(-50%, -50%) rotate(-8deg)), webkit moz);
+
+          @include media(">=desktop") {
+               background: rgba(255, 255, 255, 0.9);
+               top: 93vh;
+               left: 50%;
+               @include prefix((transform: translate3d(0, 0, 0) translate(-50%, -50%) rotate(-100deg)), webkit moz);
+               @include prefix((transition: .16s all ease-in-out), webkit moz);
+          }
+     }
+
+     .hesag:before {
+          content: "";
+          width: 6px;
+          height: 1300px;
+          background: rgba(255, 255, 255, 0.75);
+          position: absolute;
+          top: 0;
+          left: -10px
+     }
+
+     .hesag:after {
+          content: "";
+          width: 6px;
+          height: 1300px;
+          background: rgba(255, 255, 255, 0.75);
+          position: absolute;
+          top: 0;
+          right: -10px;
+     }
+
+     .textEje {
+          color: $magentaInsti;
+          font-family: BrownStd;
+          font-weight: bold;
+          z-index: 1;
+          font-size: 20px;
+          text-transform: uppercase;
+
+          @include media(">=desktop") {
+               font-size: 25px;
+          }
+     }
+
+     h2 {
+          font-family: BrownStd;
+          color: #03304A;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 12px;
+          margin-top: 6px;
+          white-space: nowrap;
+
+          @include media(">=desktop") {
+               font-size: 15px;
+          }
+     }
+}
+
+// ======================================
+//****** Estado hover menu
+//=======================================
+
+#Anavigator .Abarp.animated {
+     background: #03304a;
+     will-change: 'width, contents';
+
+     img {
+          // @include prefix((
+          // 	transform: translate3d(-50%, -45%, 0) 
+          // ), webkit moz);
+          opacity: 1;
+     }
+
+     .ejen2 .hesag {
+          opacity: 0;
+          @include prefix((transform: translate3d(0, 0, 0) translate(20%, -50%) rotate(-100deg)), webkit moz);
+     }
+
+     .ejen2 div {
+          @include prefix((transform:translate(-50%, -150%)), webkit moz);
+          opacity: 0;
+     }
+
+     .ejen2 .icon-p {
+
+          opacity: 0;
+     }
+
+     .ejen2 .guia {
+          opacity: 0;
+     }
+
+     .ejen1 {
+          opacity: 1;
+     }
+
+     .Imodulo {
+          & p:nth-of-type(1) {
+               opacity: 1;
+               @include prefix((transform: translateX(1px)), webkit moz);
+          }
+
+          & p:nth-of-type(2) {
+               opacity: 1;
+               @include prefix((transform: translateX(1px)), webkit moz);
+          }
+     }
+
+     .textF {
+          opacity: 1;
+     }
+}
+
 // #Anavigator .Abarp:hover{
 //     	width: 40%;			
 //  }
 
 
-body { width:100%; }
+body {
+     width: 100%;
+}
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 320px) {
 
-       // body { width:400px; }
+     // body { width:400px; }
 
 }
 
- 
 
 
 
 
 
- 
+
+
 ///======= animaciones
 
 // @include keyframes(bounce) {

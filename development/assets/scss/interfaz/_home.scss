@@ -194,7 +194,7 @@
           margin-right: 0;
 
           color: $blanco;
-          @include prefix((transition: .2s all ease-in-out), webkit moz);
+          // @include prefix((transition: .1s all ease-in-out), webkit moz);
      }
 }
 
@@ -304,18 +304,18 @@ $spaceH: $height / 6; //= 20px
 
           @include media(">=desktop") {
                margin-left: -1px;
-               -webkit-transition-property: width, background;
-               -moz-transition-property: width, background;
-               -ms-transition-property: width, background;
-               transition-property: width, background;
+               -webkit-transition-property: width;
+               -moz-transition-property: width;
+               -ms-transition-property: width;
+               transition-property: width;
                -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
                -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
                -ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
                transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-               -webkit-transition-duration: .5s, .2s;
-               -moz-transition-duration: .5s, .2s;
-               -ms-transition-duration: .5s, .2s;
-               transition-duration: .5s, .2s;
+               -webkit-transition-duration: .1s, .1s;
+               -moz-transition-duration: .1s, .1s;
+               -ms-transition-duration: .1s, .1s;
+               transition-duration: .1s, .1s;
                // @include prefix((
                // 	transition: .5s width cubic-bezier(0.645, 0.045, 0.355, 1)
                // ), webkit moz);
@@ -349,7 +349,7 @@ $spaceH: $height / 6; //= 20px
           // 	 transform: translate3d(-50%,-50%,0) 
           // ), webkit moz);
           @include prefix((transition-delay: .1s), webkit moz);
-          @include prefix((transition: .3s opacity cubic-bezier(0.645, 0.045, 0.355, 1)), webkit moz);
+          // @include prefix((transition: .1s opacity cubic-bezier(0.645, 0.045, 0.355, 1)), webkit moz);
           // -webkit-transition-property :opacity, transform;
           //  	-moz-transition-property    :opacity, transform;
           //  	-ms-transition-property     :opacity, transform;
@@ -425,7 +425,7 @@ $spaceH: $height / 6; //= 20px
      opacity: 0;
      top: 5%;
      height: $height;
-     @include prefix((transition: .4s opacity ease-in-out), webkit moz);
+     // @include prefix((transition: .1s opacity ease-in-out), webkit moz);
 
      div {
           position: relative;
@@ -470,9 +470,9 @@ $spaceH: $height / 6; //= 20px
           left: 3px;
      }
 
-     .hesag {
-          // @include esagono(40px, $magentaInsti, 0);
-     }
+     // .hesag {
+     //      // @include esagono(40px, $magentaInsti, 0);
+     // }
 
      .textEje {
           color: $blanco;
@@ -525,7 +525,7 @@ $spaceH: $height / 6; //= 20px
                text-align: center;
                bottom: 24px;
                @include centerer(true, false);
-               @include prefix((transition: .2s all ease-in-out), webkit moz);
+               // @include prefix((transition: .2s all ease-in-out), webkit moz);
           }
      }
 
@@ -539,7 +539,7 @@ $spaceH: $height / 6; //= 20px
           top: 45%;
           @include prefix((transform: translate(0, -50%)), webkit moz);
           opacity: 1;
-          @include prefix((transition: .5s opacity ease-in-out), webkit moz);
+          // @include prefix((transition: .1s opacity ease-in-out), webkit moz);
 
      }
 
@@ -561,7 +561,7 @@ $spaceH: $height / 6; //= 20px
           @include media(">=desktop") {
                font-size: 9em;
                margin-top: -55px;
-               @include prefix((transition: .25s all ease-in-out), webkit moz);
+               // @include prefix((transition: .25s all ease-in-out), webkit moz);
                @include centerer(true, true);
           }
      }
@@ -579,7 +579,7 @@ $spaceH: $height / 6; //= 20px
                top: 93vh;
                left: 50%;
                @include prefix((transform: translate3d(0, 0, 0) translate(-50%, -50%) rotate(-100deg)), webkit moz);
-               @include prefix((transition: .16s all ease-in-out), webkit moz);
+               // @include prefix((transition: .16s all ease-in-out), webkit moz);
           }
      }
 

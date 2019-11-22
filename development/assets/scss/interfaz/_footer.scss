@@ -1,5 +1,5 @@
-av-footer{
-	background: $azulOscuro;
+av-footer {
+    background: $azulOscuro;
     width: 100%;
     position: relative;
     bottom: 0;
@@ -9,48 +9,57 @@ av-footer{
     font-family: Brownstd;
     font-weight: 700;
     text-transform: uppercase;
-    display:block;
+    display: block;
     margin-top: 60px;
-    & .row{
-            margin-left:0;
-            margin-right:0;
-        }
-    
-    .button-next, .button-prev {
+
+    & .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .button-next,
+    .button-prev {
         background-image: url(#{$url-img}/pattern-button-footer.png);
         background-size: contain;
     }
 
-    .button-next button, .button-prev button{
-        overflow:hidden;
-         
-        &:after{
+    .button-next button,
+    .button-prev button {
+        overflow: hidden;
+
+        &:after {
             font-size: 12px;
             color: #fbf9f98c;
             bottom: 55px;
-            position: absolute;  
+            position: absolute;
         }
-        &.inicio:after{
+
+        &.inicio:after {
             content: "Nuestra pregunta";
         }
-        &.eje1:after{
-           content: "Conceptualicemos";
+
+        &.eje1:after {
+            content: "Conceptualicemos";
         }
-        &.eje2:after{
-           content: "Analicemos la situación"; 
+
+        &.eje2:after {
+            content: "Analicemos la situación";
         }
-        &.eje3:after{
-           content: "Pongamos en práctica";
+
+        &.eje3:after {
+            content: "Pongamos en práctica";
         }
-        &.eje4:after{
-           content: "Propongamonos";
+
+        &.eje4:after {
+            content: "Propongamonos";
         }
-        &.cierre:after{
-           content: "Evaluemonos";
+
+        &.cierre:after {
+            content: "Evaluemonos";
         }
 
         //====================
-        &:before{
+        &:before {
             content: "";
             width: 300px;
             height: 246px;
@@ -59,200 +68,229 @@ av-footer{
             background-size: 86%;
             background-repeat: no-repeat;
             opacity: .5;
-            @include prefix((
-                transition: .4s all ease-in-out
-              ), webkit moz); 
+            @include prefix((transition: .4s all ease-in-out), webkit moz);
         }
-        &.inicio:before{
-           background-image:url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png); 
+
+        &.inicio:before {
+            background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png);
         }
-        &.eje1:before{
-           background-image:url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png); 
+
+        &.eje1:before {
+            background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png);
         }
-        &.eje2:before{
-           background-image:url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png); 
+
+        &.eje2:before {
+            background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png);
         }
-        &.eje3:before{
-           background-image:url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png); 
+
+        &.eje3:before {
+            background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png);
         }
-        &.eje4:before{
-           background-image:url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png); 
+
+        &.eje4:before {
+            background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png);
         }
-        &.cierre:before{
-           background-image:url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png); 
+
+        &.cierre:before {
+            background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png);
         }
-        &:hover:before{
+
+        &:hover:before {
             opacity: 1;
             transform: scale(1.1);
         }
 
     }
-    .button-next button{
-        text-align:left;
-        padding-left: 10%;
-        &:before{
-           background-position: right -25px;
-           right:-39px;
+
+    .btn-foot {
+        button {
+            background-image: url(#{$url-img}/pattern-button-footer.png);
+            background-size: contain;
         }
-        &:after{
-           left: 10%;
+
+        button:first-child {
+            text-align: right;
+            padding-right: 10%;
+
+            &:before {
+                background-position: left -25px;
+                left: -39px;
+            }
+
+            &:after {
+                right: 10%;
+            }
+
+            &:hover .icon-foot {
+                @include prefix((transform: translateX(-15px)), webkit moz);
+            }
+
+            .icon-foot {
+                margin-left: -51px;
+            }
+
         }
-    }
-    .button-prev button{
-        text-align: right;
-        padding-right: 10%;
-        &:before{
-          background-position: left -25px;
-          left: -39px;
+
+        .icon-foot {
+            top: 74px;
+            font-size: 33px;
+            color: #3EC032;
+            position: absolute;
+            @include prefix((transition: .3s all ease-in-out), webkit moz);
         }
-        &:after{
-           right: 10%;
+
+        button:last-child {
+            &:hover .icon-foot {
+                @include prefix((transform: translateX(15px)), webkit moz);
+            }
+
+            .icon-foot {
+                margin-left: 82px;
+            }
+
+            padding-left: 10%;
+
+            text-align: left;
+
+            &:before {
+                background-position: right -25px;
+                right: -39px;
+            }
+
+            &:after {
+                left: 10%;
+            }
         }
     }
 
-    .referente-footer{
-        &.row{
-            margin-left:0;
-            margin-right:0;
+
+
+    .referente-footer {
+        &.row {
+            margin-left: 0;
+            margin-right: 0;
         }
-        button{
-           border: none;
-           outline: none; 
-           cursor:pointer;
-           font-size:15px;
+
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 15px;
 
         }
-        .ver-referente{
+
+        .ver-referente {
             border-right: 2px solid #141516;
         }
+
         .ver-referente,
-        .descargar-referente
-        {
+        .descargar-referente {
             color: $azulOscuro;
-            background:#d5dce0;
-            padding:24px 10px;
+            background: #d5dce0;
+            padding: 24px 10px;
             transition: .3s background ease-in-out;
             -moz-transition: .3s background ease-in-out;
             -webkit-transition: .3s background ease-in-out;
             -o-transition: .3s background ease-in-out;
-            &:hover, &:focus{
-               color: #1b4a17;
-            background:#babcbd;
+
+            &:hover,
+            &:focus {
+                color: #1b4a17;
+                background: #babcbd;
             }
-            &:hover span{
-                @include prefix((
-               animation-name: bounce
-              ), webkit moz); 
-                @include prefix((
-               transform-origin: center bottom
-              ), webkit moz); 
-                @include prefix((
-               animation-duration: 1s
-              ), webkit moz); 
-                @include prefix((
-               animation-fill-mode: both
-              ), webkit moz);             
+
+            &:hover span {
+                @include prefix((animation-name: bounce), webkit moz);
+                @include prefix((transform-origin: center bottom), webkit moz);
+                @include prefix((animation-duration: 1s), webkit moz);
+                @include prefix((animation-fill-mode: both), webkit moz);
             }
-            & span{
-                display:block;
+
+            & span {
+                display: block;
                 margin-bottom: 10px;
             }
-            & span:before{
+
+            & span:before {
                 font-size: 25px;
 
             }
 
         }
-        
+
     }
-    a{
-    	display: block;
-    	&:hover .icon-footer{
-    			@include prefix((
-			transform: translateX(15px)
-		), webkit moz);	
-    	} 
+
+    a {
+        display: block;
+
+        &:hover .icon-footer {
+            @include prefix((transform: translateX(15px)), webkit moz);
+        }
     }
-    .disable{
-        button{
-             pointer-events: none;
-            background:#2b2828;
-            color:#383535;
+
+    .disable {
+        button {
+            pointer-events: none;
+            background: #2b2828;
+            color: #383535;
+
             .icon-footer-right,
-            .icon-footer-left{
-                 color:#383535;
+            .icon-footer-left {
+                color: #383535;
             }
-            &:hover{
-                 // background:#969696;
+
+            &:hover {
+
+                // background:#969696;
                 .icon-footer-right,
-                .icon-footer-left{
-                   @include prefix((
-                    transform: translateX(0)
-                    ), webkit moz); 
-               }
+                .icon-footer-left {
+                    @include prefix((transform: translateX(0)), webkit moz);
+                }
             }
         }
     }
-    button{
+
+    button {
         border-radius: 0;
         width: 100%;
         display: block;
         padding: 80px 0;
-        color:$blanco;
-        text-decoration:none;
-        position:relative;
+        color: $blanco;
+        text-decoration: none;
+        position: relative;
         background: none;
         border: none;
         outline: none;
         font-family: Brownstd;
         font-weight: 700;
         text-transform: uppercase;
-        font-size:18px;
-        cursor:pointer;
+        font-size: 18px;
+        cursor: pointer;
         border-right: 2px solid #032b42;
-         @include prefix((
-             transition: .4s background ease-in-out
-        ), webkit moz); 
-        
-        &.tareas{
-            background:#00ac18;
+        @include prefix((transition: .4s background ease-in-out), webkit moz);
+
+        &.tareas {
+            background: #00ac18;
             padding-left: 0;
             text-align: center;
-            &:hover, &:focus{
-                background:$magentaInsti;
+
+            &:hover,
+            &:focus {
+                background: $magentaInsti;
             }
-            .icon-footer-left, .icon-footer-right{
-                color:$blanco;
+
+            .icon-footer-left,
+            .icon-footer-right {
+                color: $blanco;
             }
-        } 
+        }
+
         // &:hover, &:focus{
         //     // background:#042743;
         // }
 
-        &:hover .icon-footer-right{
-                @include prefix((
-            transform: translateX(15px)
-        ), webkit moz); 
-        } 
-        &:hover .icon-footer-left{
-                @include prefix((
-            transform: translateX(-15px)
-        ), webkit moz); 
-        }  
     }
-    .icon-footer-right{
-        margin-left: 19px;
-    }
-    .icon-footer-left{
-        margin-left: -51px;
-    }
-    .icon-footer-left, .icon-footer-right{
-            top:74px;
-			font-size: 33px;
-		    color: #3EC032;
-		    position: absolute;
-		    @include prefix((
-				transition: .3s all ease-in-out
-			), webkit moz);
-    }
+
+
+
 }

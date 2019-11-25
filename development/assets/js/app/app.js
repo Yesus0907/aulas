@@ -57,8 +57,8 @@ aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
 	appVersion: "2.0.3",
 
-	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/',
-	// apiUrl: "./assets/"
+	// apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/',
+	apiUrl: "./assets/"
 });
 
 //==================================================================
@@ -464,7 +464,7 @@ function createRoutes(data, $sce) {
 			background: "Nues <br> tra <br> pre <br> gun <br>ta",
 			context_open: "Nuestra pregunta",
 			icon:
-				"./assets/img/home/inicio.png",
+				"./assets/images/home/inicio.png",
 			small_icon: "icon-pregunta",
 			color: "oscuro"
 		},
@@ -474,7 +474,7 @@ function createRoutes(data, $sce) {
 			background: "eva <br> lue <br> mo <br> nos",
 			context_open: "Evaluémonos",
 			icon:
-				"./assets/img/home/evaluemonos.png",
+				"./assets/images/home/evaluemonos.png",
 			small_icon: "icon-lupa",
 			color: "oscuro"
 		}
@@ -487,7 +487,7 @@ function createRoutes(data, $sce) {
 			background: "con <br> cep <br> tua<br> lice <br>mos",
 			context_open: "Conceptualicemos",
 			icon:
-				"./assets/img/home/conceptualicemos.png",
+				"./assets/images/home/conceptualicemos.png",
 			small_icon: "icon-libro"
 		},
 		{
@@ -496,7 +496,7 @@ function createRoutes(data, $sce) {
 			background: "ana <br> lice <br> mos<br> la si<br>tua <br>cíon",
 			context_open: "Analicemos la<br> situación",
 			icon:
-				"./assets/img/home/alanicemos-la-situacion.png",
+				"./assets/images/home/alanicemos-la-situacion.png",
 			small_icon: "icon-engranaje"
 		},
 		{
@@ -505,7 +505,7 @@ function createRoutes(data, $sce) {
 			background: "pon <br> ga <br>mos <br> en <br> prác<br>tica ",
 			context_open: "Pongamos en<br> práctica",
 			icon:
-				"./assets/img/home/pongamos-en-practica.png",
+				"./assets/images/home/pongamos-en-practica.png",
 			small_icon: "icon-lego"
 		},
 		{
@@ -514,7 +514,7 @@ function createRoutes(data, $sce) {
 			background: "pro <br> pon <br> ga <br> mos ",
 			context_open: "Propongamos",
 			icon:
-				"./assets/img/home/propongamos.png",
+				"./assets/images/home/propongamos.png",
 			small_icon: "icon-bombillo"
 		}
 	];

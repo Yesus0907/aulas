@@ -319,7 +319,7 @@ $spaceH: $height / 6; //= 20px
                // @include prefix((
                // 	transition: .5s width cubic-bezier(0.645, 0.045, 0.355, 1)
                // ), webkit moz);
-               @include prefix((transition-delay: .1s), webkit moz);
+               // @include prefix((transition-delay: .1s), webkit moz);
                @include prefix((translate3d(0, 0, 0)), webkit moz);
                height: 100vh;
           }
@@ -539,7 +539,7 @@ $spaceH: $height / 6; //= 20px
           top: 45%;
           @include prefix((transform: translate(0, -50%)), webkit moz);
           opacity: 1;
-          // @include prefix((transition: .1s opacity ease-in-out), webkit moz);
+          @include prefix((transition: .2s opacity ease-in-out), webkit moz);
 
      }
 

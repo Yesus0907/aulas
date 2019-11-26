@@ -27,91 +27,184 @@ av-footer {
           background-size: contain;
      }
 
-     .button-next button,
-     .button-prev button {
-          overflow: hidden;
+     // .button-next button,
+     // .button-prev button {
+     //      overflow: hidden;
 
-          &:after {
-               font-size: 12px;
-               color: #fbf9f98c;
-               bottom: 55px;
-               position: absolute;
+     //      &:after {
+     //           font-size: 12px;
+     //           color: #fbf9f98c;
+     //           bottom: 55px;
+     //           position: absolute;
+     //      }
+
+     //      &.inicio:after {
+     //           content: "Nuestra pregunta";
+     //      }
+
+     //      &.eje1:after {
+     //           content: "Conceptualicemos";
+     //      }
+
+     //      &.eje2:after {
+     //           content: "Analicemos la situación";
+     //      }
+
+     //      &.eje3:after {
+     //           content: "Pongamos en práctica";
+     //      }
+
+     //      &.eje4:after {
+     //           content: "Propongamonos";
+     //      }
+
+     //      &.cierre:after {
+     //           content: "Evaluemonos";
+     //      }
+
+     //      //====================
+     //      &:before {
+     //           content: "";
+     //           width: 300px;
+     //           height: 246px;
+     //           position: absolute;
+     //           top: 0;
+     //           background-size: 86%;
+     //           background-repeat: no-repeat;
+     //           opacity: .5;
+     //           @include prefix((transition: .4s all ease-in-out), webkit moz);
+     //      }
+
+     //      &.inicio:before {
+     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png);
+     //      }
+
+     //      &.eje1:before {
+     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png);
+     //      }
+
+     //      &.eje2:before {
+     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png);
+     //      }
+
+     //      &.eje3:before {
+     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png);
+     //      }
+
+     //      &.eje4:before {
+     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png);
+     //      }
+
+     //      &.cierre:before {
+     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png);
+     //      }
+
+     //      &:hover:before {
+     //           opacity: 1;
+     //           transform: scale(1.1);
+     //      }
+
+     // }
+
+     .btns-foot {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+
+          .button-container {
+               width: 100%;
+               display: flex;
           }
 
-          &.inicio:after {
-               content: "Nuestra pregunta";
+          .arrow-text {
+               display: flex;
+               align-items: center;
+
+               p {
+                    margin-left: 20px;
+                    margin-right: 20px;
+               }
           }
 
-          &.eje1:after {
-               content: "Conceptualicemos";
+          button {
+               .icon-foot {
+                    top: 74px;
+                    font-size: 33px;
+                    color: #3EC032;
+
+                    @include prefix((transition: .3s all ease-in-out), webkit moz);
+               }
           }
 
-          &.eje2:after {
-               content: "Analicemos la situación";
+          button {
+
+               &.right {
+                    justify-content: flex-start;
+
+                    &:hover .icon-foot {
+                         @include prefix((transform: translateX(15px)), webkit moz);
+                    }
+
+                    .arrow-text {
+                         span {
+                              order: 2;
+                         }
+
+                         p {
+                              order: 1;
+                         }
+                    }
+
+                    .iconimg-foot {
+                         .wrapper-icon-foot {
+                              img {
+                                   right: -20px;
+                              }
+                         }
+                    }
+
+
+               }
           }
 
-          &.eje3:after {
-               content: "Pongamos en práctica";
+          button {
+               &.left {
+                    justify-content: flex-end;
+
+                    &:hover .icon-foot {
+                         @include prefix((transform: translateX(-15px)), webkit moz);
+                    }
+
+                    .arrow-text {
+                         span {
+                              order: 1;
+                         }
+
+                         p {
+                              order: 2;
+                         }
+                    }
+
+                    .iconimg-foot {
+                         .wrapper-icon-foot {
+                              img {
+                                   left: -20px;
+                              }
+                         }
+                    }
+
+               }
           }
 
-          &.eje4:after {
-               content: "Propongamonos";
-          }
 
-          &.cierre:after {
-               content: "Evaluemonos";
-          }
 
-          //====================
-          &:before {
-               content: "";
-               width: 300px;
-               height: 246px;
-               position: absolute;
-               top: 0;
-               background-size: 86%;
-               background-repeat: no-repeat;
-               opacity: .5;
-               @include prefix((transition: .4s all ease-in-out), webkit moz);
-          }
 
-          &.inicio:before {
-               background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png);
-          }
-
-          &.eje1:before {
-               background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png);
-          }
-
-          &.eje2:before {
-               background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png);
-          }
-
-          &.eje3:before {
-               background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png);
-          }
-
-          &.eje4:before {
-               background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png);
-          }
-
-          &.cierre:before {
-               background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png);
-          }
-
-          &:hover:before {
-               opacity: 1;
-               transform: scale(1.1);
-          }
-
-     }
-
-     .btn-foot {
           button {
                background-image: url(#{$url-img}/pattern-button-footer.png);
                background-size: contain;
                display: flex;
-               flex-direction: row;
+               // flex-direction: row;
                align-items: center;
 
                p {
@@ -119,101 +212,65 @@ av-footer {
                     padding: 0;
                }
 
-               &:before {
-                    content: "";
-                    width: 300px;
-                    height: 246px;
+               &.hidden {
+                    background: #021222;
+               }
+
+               &.external {
+                    background: $verdeInsti;
+                    text-align: center;
+                    justify-content: center;
+
+                    &:hover {
+                         background: $magentaInsti
+                    }
+
+                    .iconimg-foot,
+                    .icon-foot {
+                         display: none;
+                    }
+               }
+
+
+               &:hover {
+                    .iconimg-foot {
+                         opacity: 1;
+                    }
+
+                    .iconimg-foot .wrapper-icon-foot {
+                         transform: scale(1.1);
+                    }
+               }
+
+               .iconimg-foot {
+                    width: 100%;
+                    height: 100%;
                     position: absolute;
                     top: 0;
-                    background-size: 86%;
-                    background-repeat: no-repeat;
+                    overflow: hidden;
                     opacity: .5;
                     @include prefix((transition: .4s all ease-in-out), webkit moz);
-               }
 
-               &.inicio:before {
-                    background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png);
-               }
-          }
+                    .wrapper-icon-foot {
+                         position: relative;
+                         height: 100%;
+                         width: auto;
+                         transition: .4s transform ease-in-out;
 
-          button:first-child {
-               text-align: right;
-               padding-right: 10%;
-               justify-content: flex-end;
-
-               &:before {
-                    background-position: left -25px;
-                    left: -39px;
-               }
-
-               &:after {
-                    right: 10%;
-               }
-
-               &:hover .icon-foot {
-                    @include prefix((transform: translateX(-15px)), webkit moz);
-               }
-
-               // .icon-foot {
-               //      margin-left: -51px;
-               // }
-
-               p {
-                    order: 2;
-                    margin-left: 20px;
-               }
-
-               span:before {
-                    content: "\e90b";
-               }
-
-          }
-
-          .icon-foot {
-               top: 74px;
-               font-size: 33px;
-               color: #3EC032;
-
-               @include prefix((transition: .3s all ease-in-out), webkit moz);
-          }
-
-          button:last-child {
-               &:hover .icon-foot {
-                    @include prefix((transform: translateX(15px)), webkit moz);
-               }
-
-
-               // .icon-foot {
-               //      margin-left: 82px;
-               // }
-
-               padding-left: 10%;
-
-               text-align: left;
-
-               &:before {
-                    background-position: right -25px;
-                    right: -39px;
-               }
-
-               &:after {
-                    left: 10%;
-               }
-
-               span {
-                    order: 2;
-               }
-
-               span:before {
-                    content: "\e90d";
-               }
-
-               p {
-                    order: 1;
-                    margin-right: 20px;
+                         img {
+                              position: absolute;
+                              top: 50%;
+                              transform: translate3d(0, -50%, 0);
+                              height: 130%;
+                              width: auto;
+                         }
+                    }
                }
           }
      }
+
+
+
 
 
 
@@ -344,5 +401,14 @@ av-footer {
      }
 
 
+
+}
+
+@media(min-width: 900px) {
+     av-footer {
+          .btns-foot {
+               flex-wrap: nowrap;
+          }
+     }
 
 }

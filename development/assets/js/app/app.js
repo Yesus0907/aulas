@@ -466,7 +466,8 @@ function createRoutes(data, $sce) {
 			icon:
 				"./assets/images/home/inicio.png",
 			small_icon: "icon-pregunta",
-			color: "oscuro"
+			color: "oscuro",
+
 		},
 		{
 			context: "Evaluémonos",
@@ -476,7 +477,8 @@ function createRoutes(data, $sce) {
 			icon:
 				"./assets/images/home/evaluemonos.png",
 			small_icon: "icon-lupa",
-			color: "oscuro"
+			color: "oscuro",
+
 		}
 	];
 
@@ -488,7 +490,8 @@ function createRoutes(data, $sce) {
 			context_open: "Conceptualicemos",
 			icon:
 				"./assets/images/home/conceptualicemos.png",
-			small_icon: "icon-libro"
+			small_icon: "icon-libro",
+
 		},
 		{
 			context: "Analicemos la<br> situación",
@@ -497,7 +500,8 @@ function createRoutes(data, $sce) {
 			context_open: "Analicemos la<br> situación",
 			icon:
 				"./assets/images/home/alanicemos-la-situacion.png",
-			small_icon: "icon-engranaje"
+			small_icon: "icon-engranaje",
+
 		},
 		{
 			context: "Pongamos en<br> práctica",
@@ -506,7 +510,8 @@ function createRoutes(data, $sce) {
 			context_open: "Pongamos en<br> práctica",
 			icon:
 				"./assets/images/home/pongamos-en-practica.png",
-			small_icon: "icon-lego"
+			small_icon: "icon-lego",
+
 		},
 		{
 			context: "Propongamos",
@@ -515,7 +520,8 @@ function createRoutes(data, $sce) {
 			context_open: "Propongamos",
 			icon:
 				"./assets/images/home/propongamos.png",
-			small_icon: "icon-bombillo"
+			small_icon: "icon-bombillo",
+
 		}
 	];
 	iterator.push({
@@ -523,7 +529,8 @@ function createRoutes(data, $sce) {
 		type: "inicio",
 		typeLabel: "inicio",
 		type_context: data.type_context,
-		assets: listdefault[0]
+		assets: listdefault[0],
+
 	});
 	for (var i = 0; i < $count; i++) {
 		var index = i + 1;
@@ -533,7 +540,8 @@ function createRoutes(data, $sce) {
 			type: data.type,
 			typeLabel: data.type_label,
 			type_context: config_global.type_context,
-			assets: list[i]
+			assets: list[i],
+
 		});
 	}
 	iterator.push({
@@ -541,7 +549,8 @@ function createRoutes(data, $sce) {
 		type: "cierre",
 		typeLabel: "Cierre",
 		type_context: data.type_context,
-		assets: listdefault[1]
+		assets: listdefault[1],
+
 	});
 	return iterator;
 }

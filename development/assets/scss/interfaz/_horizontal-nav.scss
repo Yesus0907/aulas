@@ -1,104 +1,119 @@
-   
-$widthDot:100%;
-.guiadot{
-    border-bottom: 2px solid rgba(255, 255, 255, 0.17);
-    height: 7px;
-    left: 50%;
-    position: absolute;
-    top: 75px;
-    transform: translate(-50%,0);
-    z-index: 3;
-    width: 80%;
-    display:none;
-    @include media(">=600px") { // TABLET EN ADELANTE
-             display:block;
-           }
-    @include media(">=tablet") { // TABLET EN ADELANTE
-              top: 70px;
-               width: 60%;
-           }
-    &:before{
-       content: "";
-       position: absolute;
-       width: 0;
-       height: 0;
-       border-top: 10px solid transparent;
-       border-bottom: 10px solid transparent;
-       border-right: 10px solid #ffffff;
-       top: -2px;
-    }
-    &:after{
-       content: "";
-       position: absolute;
-       right: 0;
-       top: -2px;
-       width: 0;
-       height: 0;
-       border-top: 10px solid transparent;
-       border-bottom: 10px solid transparent;
-       border-left: 10px solid #ffffff;
-    }
-    ul {
-      padding: 0;
-      margin: 0;
-      text-align:center;
-      li{
-         display: inline-block;
-         width:$widthDot/7 ;
-         padding: 0;
-         margin: 0;
-         margin-bottom: -15px;
-       }
-    }
-    a {
-        display: block;
-        margin: auto;
-    }
-    a .dot {
-        width: 15px;
-        height: 15px;
-        border: none;
-        float: none;
-        margin: auto;
-        border-color: #fff;
-        background: #fff;
-        display: block;
-        margin: auto;
-        animation: none;
-        transform: scale(1);
-    }
-    a p{
-      color:#fff;
-      font-size:11px;
-      font-weight:700;
-      padding:5px 0;
-      @include prefix((
-        transition: .5s all ease-in-out
-      ), webkit moz); 
+   $widthDot:100%;
 
-    }
-    a.active .dot {
-        animation: fx 1000ms ease infinite 0ms;
-        transform: scale(0);
-        border-color: #3EC032;
-        background: #3EC032;
-    }
-    a.active p {
-       color: #3EC032;
-       font-size:11px;
-     }
-    
-}
+   .guiadot {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.17);
+        height: 7px;
+        left: 50%;
+        position: absolute;
+        top: 75px;
+        transform: translate(-50%, 0);
+        z-index: 3;
+        width: 80%;
+        display: none;
 
-.guiadot.oscuro{
-    a.active .dot {
-        animation: fx 1000ms ease infinite 0ms;
-        transform: scale(0);
-        border-color: $azulOscuro;
-        background: $azulOscuro;
-    }
-     a.active p {
-       color: $azulOscuro;
-       font-size:11px;
-     }
-}
+
+        &:before {
+             content: "";
+             position: absolute;
+             width: 0;
+             height: 0;
+             border-top: 10px solid transparent;
+             border-bottom: 10px solid transparent;
+             border-right: 10px solid #ffffff;
+             top: -2px;
+        }
+
+        &:after {
+             content: "";
+             position: absolute;
+             right: 0;
+             top: -2px;
+             width: 0;
+             height: 0;
+             border-top: 10px solid transparent;
+             border-bottom: 10px solid transparent;
+             border-left: 10px solid #ffffff;
+        }
+
+        ul {
+             padding: 0;
+             margin: 0;
+             text-align: center;
+
+             li {
+                  display: inline-block;
+                  width: $widthDot/7;
+                  padding: 0;
+                  margin: 0;
+                  margin-bottom: -15px;
+             }
+        }
+
+        a {
+             display: block;
+             margin: auto;
+        }
+
+        a .dot {
+             width: 15px;
+             height: 15px;
+             border: none;
+             float: none;
+             margin: auto;
+             border-color: #fff;
+             background: #fff;
+             display: block;
+             margin: auto;
+             animation: none;
+             transform: scale(1);
+        }
+
+        a p {
+             color: #fff;
+             font-size: 11px;
+             font-weight: 700;
+             padding: 5px 0;
+             @include prefix((transition: .5s all ease-in-out), webkit moz);
+
+        }
+
+        a.active .dot {
+             animation: fx 1000ms ease infinite 0ms;
+             transform: scale(0);
+             border-color: #3EC032;
+             background: #3EC032;
+        }
+
+        a.active p {
+             color: #3EC032;
+             font-size: 11px;
+        }
+
+   }
+
+   .guiadot.oscuro {
+        a.active .dot {
+             animation: fx 1000ms ease infinite 0ms;
+             transform: scale(0);
+             border-color: $azulOscuro;
+             background: $azulOscuro;
+        }
+
+        a.active p {
+             color: $azulOscuro;
+             font-size: 11px;
+        }
+   }
+
+   @media (min-width: 768px) {
+        .guiadot {
+             top: 70px;
+             width: 60%;
+        }
+   }
+
+   @media (min-width: 600px) {
+        .guiadot {
+             display: block;
+        }
+   }

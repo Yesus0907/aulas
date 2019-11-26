@@ -7,14 +7,37 @@
 	<!-- <div class="col-sm-4 ir-tareas"><span class="lnr icon-graduation-hat"></span>Ir a tareas y evaluaciones</div> -->
 </div>
 <div class="row">
-	<div class="btn-foot col-12 padding">
-		<button ng-init="
+	<div class="btns-foot col-12 padding">
+		<div class="button-container" ng-repeat="elem in getpage()" ng-switch="elem.type">
+			<button class="{{elem.type}}" ng-switch-when="external">
+				<p>{{elem.typeLabel}}</p>
+			</button>
+			<button ng-click="siguiente(mindex ? elem.type + mindex: elem.type)"
+				ng-init="mindex = elem.index === 0 || elem.index === config.length -1 ? undefined: elem.index"
+				class="{{elem.type}} {{$index > 0 ? 'right' : 'left'}}" ng-switch-default>
+				<div class="arrow-text">
+					<span ng-if=" elem" class="icon-foot lnr icon-arrow-{{$index > 0 ? 'right' : 'left'}}"></span>
+					<p>{{elem.typeLabel + ' ' + mindex}}</p>
+				</div>
+				<div class="iconimg-foot">
+					<div class="wrapper-icon-foot ">
+						<img src="{{elem.assets.icon}}" alt="">
+					</div>
+				</div>
+			</button>
+		</div>
+		<!-- <button ng-init="
 			mindex = elem.index === 0 || elem.index === config.length -1 ? undefined: elem.index" ng-repeat="elem in getpage()"
-			ng-click="siguiente(mindex ? elem.type + mindex: elem.type)" class="col-sm-6"
-			ng-class="{'{{mindex ? 'item' + mindex: elem.type}}': true}">
+			ng-click="siguiente(mindex ? elem.type + mindex: elem.type)" class="col-sm-6 {{elem.type}}"
+			ng-class="{'hidden': elem.type === 'undefined'">
 			<span ng-if="elem" class="icon-foot lnr icon-arrow-right"></span>
 			<p>{{elem.typeLabel + ' ' + mindex}}</p>
-		</button>
+			<div class="iconimg-foot {{$index > 0 ? 'right' : 'left'}}">
+				<div class="wrapper-icon-foot ">
+					<img src="{{elem.assets.icon}}" alt="">
+				</div>
+			</div>
+		</button> -->
 	</div>
 </div>
 <!-- <div class="row" ng-if="noModules()">

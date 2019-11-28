@@ -24,6 +24,8 @@ aulaApp.directive("contenido", ["versionApp", "$rootScope", function (versionApp
 		controller: function ($element, $scope, $sce, $rootScope, ModalService, datosCanvas) {
 			// guarda el valor  del enlace del referente completo
 			$rootScope.referenteCompleto = $scope.referenteCompleto;
+			$scope.canvas = $rootScope.config[0].type_context
+			console.log("cpnt", $scope.canvas)
 			//-----------------------------------------------------------------------------
 			// obtiene el valor user y curso desde datosCanvas
 			$scope.encuentroLink = "https://contenidos.areandina.edu.co/repo/aulacanvas/public/meeting.html?idcourse=" + datosCanvas.idCurso + "&" + "iduser=" + datosCanvas.idUser;
@@ -61,7 +63,6 @@ aulaApp.directive("contenido", ["versionApp", "$rootScope", function (versionApp
 						this.descripcion2 = $sce.trustAsHtml($scope.text2);
 						this.showAutor1 = $scope.autor1;
 						this.showAutor2 = $scope.autor2;
-
 					},
 					controllerAs: "pdf",
 					templateUrl: "modal-autor.html",

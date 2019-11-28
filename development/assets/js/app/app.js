@@ -57,8 +57,8 @@ aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
 	appVersion: "2.0.3",
 
-	// apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/',
-	apiUrl: "./assets/"
+	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/',
+	// apiUrl: "./assets/"
 });
 
 //==================================================================
@@ -68,10 +68,25 @@ aulaApp.run([
 	"$rootScope",
 	"$sce",
 	function ($rootScope, $sce) {
-		window.parent.postMessage(
-			{ message: "startAv" },
-			"https://areandina.instructure.com"
-		);
+
+		var lms = config_global.lms
+		switch (lms) {
+			case 'moodle':
+				window.parent.postMessage(
+					{ message: "startAv" },
+					"https://pruebamoddle.areandina.edu.co"
+				);
+				break;
+			case 'canvas':
+				window.parent.postMessage(
+					{ message: "startAv" },
+					"https://areandina.instructure.com"
+				);
+				break;
+
+			default:
+				break;
+		}
 
 		$rootScope.datosCanvas = {
 			idCurso: "curso",
@@ -83,7 +98,7 @@ aulaApp.run([
 		window.addEventListener(
 			"message",
 			function (event, $rootscope) {
-				if (event.origin === "https://areandina.instructure.com") {
+				if (event.origin === "https://areandina.instructure.com" || event.origin === "https://pruebamoddle.areandina.edu.co") {
 					console.log("Received message: " + event.data.message);
 					if (event.data.message == "getIdCourse") {
 						var idCurso = event.data.parameter;
@@ -390,7 +405,8 @@ function initPagesRouters(aulaConfig, provider) {
 aulaApp.controller("homeCtrl", [
 	"$scope",
 	"$rootScope",
-	function ($scope, $rootScope) {
+	"$sce",
+	function ($scope, $rootScope, $sce) {
 		$scope.pageClass = "home";
 		$scope.typeLabel = config_global.type_label;
 		$scope.type = config_global.type;
@@ -409,7 +425,7 @@ aulaApp.controller("homeCtrl", [
 			}
 		};
 
-		$scope.homemenu = $rootScope.config;
+		$scope.homemenu = $sce.trustAsResourceUrl($rootScope.config);
 	}
 ]);
 
@@ -464,7 +480,7 @@ function createRoutes(data, $sce) {
 			background: "Nues <br> tra <br> pre <br> gun <br>ta",
 			context_open: "Nuestra pregunta",
 			icon:
-				"./assets/images/home/inicio.png",
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/inicio.png",
 			small_icon: "icon-pregunta",
 			color: "oscuro",
 
@@ -475,7 +491,7 @@ function createRoutes(data, $sce) {
 			background: "eva <br> lue <br> mo <br> nos",
 			context_open: "Evaluémonos",
 			icon:
-				"./assets/images/home/evaluemonos.png",
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/evaluemonos.png",
 			small_icon: "icon-lupa",
 			color: "oscuro",
 
@@ -489,7 +505,7 @@ function createRoutes(data, $sce) {
 			background: "con <br> cep <br> tua<br> lice <br>mos",
 			context_open: "Conceptualicemos",
 			icon:
-				"./assets/images/home/conceptualicemos.png",
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/conceptualicemos.png",
 			small_icon: "icon-libro",
 
 		},
@@ -499,7 +515,7 @@ function createRoutes(data, $sce) {
 			background: "ana <br> lice <br> mos<br> la si<br>tua <br>cíon",
 			context_open: "Analicemos la<br> situación",
 			icon:
-				"./assets/images/home/alanicemos-la-situacion.png",
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/alanicemos-la-situacion.png",
 			small_icon: "icon-engranaje",
 
 		},
@@ -509,7 +525,7 @@ function createRoutes(data, $sce) {
 			background: "pon <br> ga <br>mos <br> en <br> prác<br>tica ",
 			context_open: "Pongamos en<br> práctica",
 			icon:
-				"./assets/images/home/pongamos-en-practica.png",
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/pongamos-en-practica.png",
 			small_icon: "icon-lego",
 
 		},
@@ -519,7 +535,7 @@ function createRoutes(data, $sce) {
 			background: "pro <br> pon <br> ga <br> mos ",
 			context_open: "Propongamos",
 			icon:
-				"./assets/images/home/propongamos.png",
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/propongamos.png",
 			small_icon: "icon-bombillo",
 
 		}
@@ -530,6 +546,7 @@ function createRoutes(data, $sce) {
 		typeLabel: "inicio",
 		type_context: data.type_context,
 		assets: listdefault[0],
+		lsm: config_global.lms
 
 	});
 	for (var i = 0; i < $count; i++) {
@@ -541,7 +558,7 @@ function createRoutes(data, $sce) {
 			typeLabel: data.type_label,
 			type_context: config_global.type_context,
 			assets: list[i],
-
+			lsm: config_global.lms
 		});
 	}
 	iterator.push({
@@ -550,7 +567,7 @@ function createRoutes(data, $sce) {
 		typeLabel: "Cierre",
 		type_context: data.type_context,
 		assets: listdefault[1],
-
+		lsm: config_global.lms
 	});
 	return iterator;
 }

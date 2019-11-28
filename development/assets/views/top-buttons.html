@@ -1,21 +1,29 @@
 <div class="wrapper-navegador" ui-scrollpoint="+100px">
 	<div class="navegador-top">
 		<div class="container-btns col-xs-12  no-padding">
-			<button class="menu-button"><span>menu</span><p>MENU</p></button>
-			<button class="trigg home-button" ui-sref="home" ><span class="lnr icon-home"></span><span class="nombre">HOME</span></button>
-			<a href="{{tareasLoad()}}" target="_blank"><button class="tareas-button"><span class="lnr icon-graduation-hat"></span><span class="nombre">TAREAS</span></button></a>
-			
+			<button class="menu-button"><span>menu</span>
+				<p>MENU</p>
+			</button>
+			<button class="trigg home-button" ui-sref="home"><span class="lnr icon-home"></span><span
+					class="nombre">HOME</span></button>
+			<a ng-if="canvas" href="{{tareasLoad()}}" target="_blank"><button class="tareas-button"><span
+						class="lnr icon-graduation-hat"></span><span class="nombre">TAREAS</span></button></a>
 		</div>
 	</div>
 </div>
-
-
 <nav id="menuPrincipal">
 	<ul>
-		<li><span class="lnr icon-camera-video"></span><a href="" ng-click="pdfModal()" class="btn-conoce" >Conoce tu plataforma</a></li>
-		<li><span class="lnr icon-smile"></span><a href="https://contenidos.areandina.edu.co/repo/aulacanvas/public/mesadeayuda.estudiantes.html" target="blank_">Mesa de ayuda</a></li>
-		<li><span class="lnr icon-graduation-hat"></span><a href="https://contenidos.areandina.edu.co/repo/aulacanvas/CoCanvas/campusvirtual.php" target="blank_">Campus virtual</a></li>
-		<li><span class="lnr icon-book"></span><a href="{{bibliotecaLink()}}" target="blank_">Biblioteca</a></li>
-		<li class="encuentroS"></li>
+		<li ng-if="canvas"><span class="lnr icon-camera-video"></span><a href="" ng-click="pdfModal()"
+				class="btn-conoce">Conoce tu
+				plataforma</a></li>
+		<li><span class="lnr icon-smile"></span><a
+				href="https://contenidos.areandina.edu.co/repo/aulacanvas/public/mesadeayuda.estudiantes.html"
+				target="blank_">Mesa de ayuda</a></li>
+		<li><span class="lnr icon-graduation-hat"></span><a
+				href="https://contenidos.areandina.edu.co/repo/aulacanvas/CoCanvas/campusvirtual.php"
+				target="blank_">Campus virtual</a></li>
+		<li ng-if="canvas"><span class="lnr icon-book"></span><a href="{{bibliotecaLink()}}"
+				target="blank_">Biblioteca</a></li>
+		<li class="encuentroS" ng-if="canvas"></li>
 	</ul>
 </nav>

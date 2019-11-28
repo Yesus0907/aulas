@@ -98,6 +98,13 @@ aulaApp.directive("avFooter", [
 					typeLabel: 'Evaluación de desempeño',
 					type_context: $scope.config[0].type_context
 				}
+				var activitiesButton = {
+					type: 'external',
+					icon: 'icon-graduation-hat',
+					link: $scope.tareasLoad(),
+					typeLabel: 'Mis actividades',
+					type_context: $scope.config[0].type_context
+				}
 
 				$scope.getpage = function () {
 					var config = $scope.config;
@@ -105,12 +112,17 @@ aulaApp.directive("avFooter", [
 					var navFooter = [];
 					var prev = index - 1 < 0 ? false : index - 1;
 					var next = index + 1 === config.length ? false : index + 1;
+					var last = index + 1 === config.length
 					var center = Math.floor(config.length / 2);
 
 					navFooter.push(config[prev]);
 					if (index === center && config[0].type_context) {
 						navFooter.push(externalButton);
 					}
+					if (last) {
+						navFooter.push(activitiesButton);
+					}
+					console.log(index + 1 === config.length)
 
 					// if (index === center) {
 					// 	console.log(center, index)

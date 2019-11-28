@@ -17,8 +17,6 @@ av-footer {
      display: block;
      margin-top: 60px;
 
-
-
      & .row {
           margin-left: 0;
           margin-right: 0;
@@ -38,7 +36,6 @@ av-footer {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-
 
           .button-container {
                flex-grow: 2;
@@ -76,7 +73,7 @@ av-footer {
                display: flex;
                // flex-direction: row;
                align-items: center;
-
+               @include prefix((transition: .4s background ease-in-out), webkit moz);
 
                p {
                     margin: 0;
@@ -90,10 +87,15 @@ av-footer {
                     text-align: center;
                     justify-content: center;
                     color: $blanco;
-                    padding: 0 30px;
+                    padding: 0 40px;
 
                     &:hover {
                          background: $magentaInsti
+                    }
+
+                    .tareas {
+                         font-size: 31px;
+                         margin-left: 20px;
                     }
 
                     .iconimg-foot,
@@ -308,7 +310,7 @@ av-footer {
           font-size: 18px;
           cursor: pointer;
           border-right: 2px solid #032b42;
-          @include prefix((transition: .4s background ease-in-out), webkit moz);
+          // @include prefix((transition: .4s background ease-in-out), webkit moz);
 
           &.tareas {
                background: #00ac18;

@@ -29,7 +29,7 @@
 			<!-- <p class="textF">con <br> cep <br> tua<br> lice <br>mos</p> -->
 			<p ng-if="item.type_context" class="textF" ng-bind-html="item.assets.background"></p>
 			<!-- build:[src] {{item.assets.context}} -->
-			<img src="{{item.assets.icon}}" height="800" width="800" alt="{{item.assets.context}}">
+			<img ng-src='{{item.assets.icon}}' height="800" width="800" alt="{{item.assets.context}}">
 			<!-- /build -->
 			<div class="Imodulo">
 				<p>Iniciar {{mindex ? typeLabel: undefined }}</p>

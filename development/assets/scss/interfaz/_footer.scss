@@ -1,3 +1,8 @@
+.hidden {
+     opacity: 0;
+     display: none !important;
+}
+
 av-footer {
      background: $azulOscuro;
      width: 100%;
@@ -11,6 +16,8 @@ av-footer {
      text-transform: uppercase;
      display: block;
      margin-top: 60px;
+
+
 
      & .row {
           margin-left: 0;
@@ -27,85 +34,6 @@ av-footer {
           background-size: contain;
      }
 
-     // .button-next button,
-     // .button-prev button {
-     //      overflow: hidden;
-
-     //      &:after {
-     //           font-size: 12px;
-     //           color: #fbf9f98c;
-     //           bottom: 55px;
-     //           position: absolute;
-     //      }
-
-     //      &.inicio:after {
-     //           content: "Nuestra pregunta";
-     //      }
-
-     //      &.eje1:after {
-     //           content: "Conceptualicemos";
-     //      }
-
-     //      &.eje2:after {
-     //           content: "Analicemos la situación";
-     //      }
-
-     //      &.eje3:after {
-     //           content: "Pongamos en práctica";
-     //      }
-
-     //      &.eje4:after {
-     //           content: "Propongamonos";
-     //      }
-
-     //      &.cierre:after {
-     //           content: "Evaluemonos";
-     //      }
-
-     //      //====================
-     //      &:before {
-     //           content: "";
-     //           width: 300px;
-     //           height: 246px;
-     //           position: absolute;
-     //           top: 0;
-     //           background-size: 86%;
-     //           background-repeat: no-repeat;
-     //           opacity: .5;
-     //           @include prefix((transition: .4s all ease-in-out), webkit moz);
-     //      }
-
-     //      &.inicio:before {
-     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/inicio.png);
-     //      }
-
-     //      &.eje1:before {
-     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/conceptualicemos.png);
-     //      }
-
-     //      &.eje2:before {
-     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/alanicemos-la-situacion.png);
-     //      }
-
-     //      &.eje3:before {
-     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/pongamos-en-practica.png);
-     //      }
-
-     //      &.eje4:before {
-     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/propongamos.png);
-     //      }
-
-     //      &.cierre:before {
-     //           background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/1.0.0/prod/img/evaluemonos.png);
-     //      }
-
-     //      &:hover:before {
-     //           opacity: 1;
-     //           transform: scale(1.1);
-     //      }
-
-     // }
-
      .btns-foot {
           display: flex;
           justify-content: space-between;
@@ -113,8 +41,12 @@ av-footer {
 
 
           .button-container {
-               width: 100%;
+               flex-grow: 2;
                display: flex;
+
+               &.external {
+                    flex-grow: 0;
+               }
           }
 
           .arrow-text {
@@ -127,7 +59,7 @@ av-footer {
                }
           }
 
-          button {
+          .button-footer {
                .icon-foot {
                     top: 74px;
                     font-size: 33px;
@@ -137,89 +69,28 @@ av-footer {
                }
           }
 
-          button {
-
-               &.right {
-                    justify-content: flex-start;
-
-                    &:hover .icon-foot {
-                         @include prefix((transform: translateX(15px)), webkit moz);
-                    }
-
-                    .arrow-text {
-                         span {
-                              order: 2;
-                         }
-
-                         p {
-                              order: 1;
-                         }
-                    }
-
-                    .iconimg-foot {
-                         .wrapper-icon-foot {
-                              img {
-                                   right: -20px;
-                              }
-                         }
-                    }
-
-
-               }
-          }
-
-          button {
-               &.left {
-                    justify-content: flex-end;
-
-                    &:hover .icon-foot {
-                         @include prefix((transform: translateX(-15px)), webkit moz);
-                    }
-
-                    .arrow-text {
-                         span {
-                              order: 1;
-                         }
-
-                         p {
-                              order: 2;
-                         }
-                    }
-
-                    .iconimg-foot {
-                         .wrapper-icon-foot {
-                              img {
-                                   left: -20px;
-                              }
-                         }
-                    }
-
-               }
-          }
-
-
-
-
-          button {
+          .button-footer {
+               width: 100%;
                background-image: url(#{$url-img}/pattern-button-footer.png);
                background-size: contain;
                display: flex;
                // flex-direction: row;
                align-items: center;
 
+
                p {
                     margin: 0;
                     padding: 0;
                }
 
-               &.hidden {
-                    background: #021222;
-               }
+
 
                &.external {
                     background: $verdeInsti;
                     text-align: center;
                     justify-content: center;
+                    color: $blanco;
+                    padding: 0 30px;
 
                     &:hover {
                          background: $magentaInsti
@@ -265,6 +136,67 @@ av-footer {
                               width: auto;
                          }
                     }
+               }
+
+               &.right {
+                    justify-content: flex-start;
+
+                    &:hover .icon-foot {
+                         @include prefix((transform: translateX(15px)), webkit moz);
+                    }
+
+                    .arrow-text {
+                         margin-left: 5%;
+
+                         span {
+                              order: 2;
+                              margin-left: 10px;
+                         }
+
+                         p {
+                              order: 1;
+                         }
+                    }
+
+                    .iconimg-foot {
+                         .wrapper-icon-foot {
+                              img {
+                                   right: -20px;
+                              }
+                         }
+                    }
+
+
+               }
+
+               &.left {
+                    justify-content: flex-end;
+
+                    &:hover .icon-foot {
+                         @include prefix((transform: translateX(-15px)), webkit moz);
+                    }
+
+                    .arrow-text {
+                         margin-right: 5%;
+
+                         span {
+                              order: 1;
+                              margin-right: 10px;
+                         }
+
+                         p {
+                              order: 2;
+                         }
+                    }
+
+                    .iconimg-foot {
+                         .wrapper-icon-foot {
+                              img {
+                                   left: -20px;
+                              }
+                         }
+                    }
+
                }
           }
      }

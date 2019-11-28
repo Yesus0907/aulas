@@ -1,32 +1,54 @@
 <div class="row referente-footer row-md-equal-height" ng-if="hideReferente()">
-	<button class="col-sm-6 ver-referente" ng-click="pdfModal()">
-		<span class="lnr icon-file-add"></span>ver referente completo
-	</button>
-	<a class="col-sm-6 descargar-referente" href="{{referenteCompleto}}" download="{{enlaceDes}}"><span
-			class="lnr icon-download"></span>descargar referente</a>
-	<!-- <div class="col-sm-4 ir-tareas"><span class="lnr icon-graduation-hat"></span>Ir a tareas y evaluaciones</div> -->
+   <button class="col-sm-6 ver-referente" ng-click="pdfModal()">
+      <span class="lnr icon-file-add"></span>ver referente completo
+   </button>
+   <a
+      class="col-sm-6 descargar-referente"
+      href="{{referenteCompleto}}"
+      download="{{enlaceDes}}"
+      target="_blank"
+      ><span class="lnr icon-download"></span>descargar referente</a
+   >
+   <!-- <div class="col-sm-4 ir-tareas"><span class="lnr icon-graduation-hat"></span>Ir a tareas y evaluaciones</div> -->
 </div>
 <div class="row">
-	<div class="btns-foot col-12 padding">
-		<div class="button-container" ng-repeat="elem in getpage()" ng-switch="elem.type">
-			<button class="{{elem.type}}" ng-switch-when="external">
-				<p>{{elem.typeLabel}}</p>
-			</button>
-			<button ng-click="siguiente(mindex ? elem.type + mindex: elem.type)"
-				ng-init="mindex = elem.index === 0 || elem.index === config.length -1 ? undefined: elem.index"
-				class="{{elem.type}} {{$index > 0 ? 'right' : 'left'}}" ng-switch-default>
-				<div class="arrow-text">
-					<span ng-if=" elem" class="icon-foot lnr icon-arrow-{{$index > 0 ? 'right' : 'left'}}"></span>
-					<p>{{elem.typeLabel + ' ' + mindex}}</p>
-				</div>
-				<div class="iconimg-foot">
-					<div class="wrapper-icon-foot ">
-						<img src="{{elem.assets.icon}}" alt="">
-					</div>
-				</div>
-			</button>
-		</div>
-		<!-- <button ng-init="
+   <div class="btns-foot col-12 padding">
+      <div
+         class="button-container"
+         ng-repeat="elem in getpage()"
+         ng-switch="elem.type"
+         ng-class="{'{{elem.type ? elem.type : 'hidden'}}':true}"
+      >
+         <a
+            href="{{elem.link}}"
+            target="_blank"
+            class="button-footer {{elem.type}}"
+            ng-switch-when="external"
+         >
+            <p>{{elem.typeLabel}}</p>
+         </a>
+         <button
+            ng-click="siguiente(mindex ? elem.type + mindex: elem.type)"
+            ng-init="mindex = elem.index === 0 || elem.index === config.length -1 ? undefined: elem.index"
+            class="button-footer"
+            ng-class="{'{{elem.type ? elem.type : 'hidden'}}': true, '{{$index > 0 ? 'right' : 'left'}}':true}"
+            ng-switch-default
+         >
+            <div class="arrow-text">
+               <span
+                  ng-if=" elem"
+                  class="icon-foot lnr icon-arrow-{{$index > 0 ? 'right' : 'left'}}"
+               ></span>
+               <p>{{elem.typeLabel + ' ' + mindex}}</p>
+            </div>
+            <div class="iconimg-foot">
+               <div class="wrapper-icon-foot ">
+                  <img src="{{elem.assets.icon}}" alt="" />
+               </div>
+            </div>
+         </button>
+      </div>
+      <!-- <button ng-init="
 			mindex = elem.index === 0 || elem.index === config.length -1 ? undefined: elem.index" ng-repeat="elem in getpage()"
 			ng-click="siguiente(mindex ? elem.type + mindex: elem.type)" class="col-sm-6 {{elem.type}}"
 			ng-class="{'hidden': elem.type === 'undefined'">
@@ -38,7 +60,7 @@
 				</div>
 			</div>
 		</button> -->
-	</div>
+   </div>
 </div>
 <!-- <div class="row" ng-if="noModules()">
 	<div class="col-sm-6 no-padding button-prev">

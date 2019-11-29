@@ -9,7 +9,7 @@ aulaApp.directive('navegadorHorizontal', ['versionApp', '$rootScope', function (
 		controllerAs: 'ctrl',
 		controller: function (versionApp, $scope) {
 			$scope.pages = $rootScope.config
-			console.log($scope.pages)
+
 		},
 		link: function ($scope, $element, $attrs) {
 			$scope.identificador = 1;
@@ -20,10 +20,10 @@ aulaApp.directive('navegadorHorizontal', ['versionApp', '$rootScope', function (
 			$($element).on("click", ".dot", function () {
 				var origen = "";
 				origen = $(".areaContent").attr("id");
-				console.log(origen)
+
 
 				var destino = $(this).attr("id");
-				console.log(destino)
+
 				if (destino < origen) {
 					$(".contenedorp").removeClass("left");
 					$(".contenedorp").addClass("right");

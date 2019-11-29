@@ -5414,7 +5414,7 @@ header-menu .logos img {
 }
 
 .headerMenu.cierreHeader .wrapper-text .description span {
-     color: #fff;
+     /* color: #fff; */
      font-size: 20px;
 }
 

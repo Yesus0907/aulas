@@ -1,8 +1,8 @@
-<!-- <modal-notification></modal-notification> -->
+<modal-notification></modal-notification>
 <nav id="Anavigator" class="visible-lg-flex">
 	<div ng-mouseenter="hover = true; alert('enter',item.index)" ng-mouseleave="hover = false; alert('out',item.index)"
 		ng-class="{'animated': hover, 'open-item':hover}"
-		ng-init="hover = false; mindex = item.index === 0 || item.index === homemenu.length ? undefined: item.index"
+		ng-init="hover = false; mindex = item.index === 0 || item.index + 1 === homemenu.length ? undefined: item.index"
 		ng-repeat="item in homemenu" class="Abarp" id="{{'Abar' +  (item.index + 1)}}"
 		ng-style="{ width:( 100 / homemenu.length + '%' )}">
 		<a ui-sref="{{item.type + (mindex ? item.index: undefined)}}">
@@ -28,7 +28,7 @@
 			</div>
 			<!-- <p class="textF">con <br> cep <br> tua<br> lice <br>mos</p> -->
 			<p ng-if="item.type_context" class="textF" ng-bind-html="item.assets.background"></p>
-			<!-- build:[src] {{item.assets.context}} -->
+			<!-- build:[src] {{item.assets.icon}} -->
 			<img ng-src='{{item.assets.icon}}' height="800" width="800" alt="{{item.assets.context}}">
 			<!-- /build -->
 			<div class="Imodulo">
@@ -41,69 +41,18 @@
 <!--  -->
 <!--  -->
 <div class="hidden-lg movil-nav">
-	<div class="cont-b">
-		<!--  -->
-		<a ui-sref="inicio" class="col-xs-6 b-inicio">
-			<img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/home/inicio.jpg"
-				alt="">
-			<p class="lnr icon-pregunta"></p>
-			<div class="fott">
-				<span>inicio</span>
-				<h2>Nuestra pregunta</h2>
-			</div>
-		</a>
-		<!--  -->
-		<a ui-sref="eje1" class="col-xs-6 b-eje1">
-			<img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/home/eje1.jpg"
-				alt="">
-			<p class="lnr icon-libro icon-p"></p>
-			<div class="fott">
-				<span>{{typeLabel}}1</span>
-				<h2>Conceptualicemos</h2>
-			</div>
-		</a>
-		<!--  -->
-	</div>
-	<div class="cont-b">
-		<a ui-sref="eje2" class="col-xs-6 b-eje2">
-			<img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/home/eje2.jpg"
-				alt="">
-			<p class="lnr icon-engranaje icon-p"></p>
-			<div class="fott">
-				<span>{{typeLabel}} 2</span>
-				<h2>Analicemos la <br>situación</h2>
-			</div>
-		</a>
-		<a ui-sref="eje3" class="col-xs-6 b-eje3">
-			<img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/home/eje3.jpg"
-				alt="">
-			<p class="lnr icon-lego icon-p"></p>
-			<div class="fott">
-				<span>{{typeLabel}} 3</span>
-				<h2>Pongamos en <br>práctica</h2>
-			</div>
-		</a>
-	</div>
-	<div class="cont-b">
-		<a ui-sref="eje4" class="col-xs-6 b-eje4">
-			<img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/home/eje4.jpg"
-				alt="">
-			<p class="lnr icon-bombillo icon-p"></p>
-			<div class="fott">
-				<span>{{typeLabel}} 4</span>
-				<h2>Propongamos</h2>
-			</div>
-		</a>
-		<a ui-sref="cierre" class="col-xs-6 b-cierre">
-			<img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/home/cierre.jpg"
-				alt="">
-			<p class="lnr icon-lupa icon-p"></p>
-			<div class="fott">
-				<span>cierre</span>
-				<h2>Evaluémonos</h2>
-			</div>
-		</a>
-	</div>
+	<!--  -->
+	<a ng-repeat="item in homemenu" ui-sref="{{item.type + (mindex ? item.index: undefined)}}"
+		ng-init="hover = false; mindex = item.index === 0 || item.index + 1 === homemenu.length ? undefined: item.index"
+		class="col-xs-6 movil-button {{mindex ? ('item' + item.index) : item.type }}">
+		<img ng-src="{{item.assets.icon}}" alt="">
+		<p class="lnr {{item.assets.small_icon}}"></p>
+		<div class="fott">
+			<span>{{item.typeLabel + ' ' + mindex}}</span>
+			<h2 ng-bind-html="item.assets.context "></h2>
+		</div>
+	</a>
+</div>
 </div>
 <!-- <div class="col-xs-6 hidden-xs" style="color:white">uno</div>
 <div class="col-xs-6" style="color:white">dos</div> -->

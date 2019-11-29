@@ -55,7 +55,7 @@ aulaApp.config([
 //==================================================================
 aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
-	appVersion: "2.0.3",
+	appVersion: "2.1.0",
 
 	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/',
 	// apiUrl: "./assets/"
@@ -99,7 +99,7 @@ aulaApp.run([
 			"message",
 			function (event, $rootscope) {
 				if (event.origin === "https://areandina.instructure.com" || event.origin === "https://pruebamoddle.areandina.edu.co") {
-					console.log("Received message: " + event.data.message);
+					// console.log("Received message: " + event.data.message);
 					if (event.data.message == "getIdCourse") {
 						var idCurso = event.data.parameter;
 						$rootScope.$apply(function () {
@@ -133,7 +133,7 @@ aulaApp.run([
 						// console.log($rootScope.datosCanvas[1].nameUser);
 					}
 				} else {
-					console.log("Frame no recibe mensaje desde instructure");
+					console.log("Frame no recibe mensaje");
 				}
 			},
 			true
@@ -435,12 +435,12 @@ aulaApp.controller("homeCtrl", [
 function initControllers(aulaConfig) {
 	aulaConfig.forEach(initController);
 	function initController(item, index, arr) {
-		console.log("controller");
+
 		var page = buildConfig(item, arr.length);
 		aulaApp.controller(page.controller, [
 			"$scope",
 			function ($scope) {
-				console.log("intocontroller", item);
+
 				$scope.pageId = item.index;
 			}
 		]);

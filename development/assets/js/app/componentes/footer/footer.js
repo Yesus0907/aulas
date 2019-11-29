@@ -122,7 +122,7 @@ aulaApp.directive("avFooter", [
 					if (last) {
 						navFooter.push(activitiesButton);
 					}
-					console.log(index + 1 === config.length)
+
 
 					// if (index === center) {
 					// 	console.log(center, index)
@@ -144,7 +144,7 @@ aulaApp.directive("avFooter", [
 					// });
 					// }
 					navFooter.push(config[next]);
-					console.log(navFooter)
+
 					return navFooter;
 				};
 				// $scope.future = function () {
@@ -229,7 +229,7 @@ aulaApp.directive("avFooter", [
 
 				// activa los enlaces del footer
 				$scope.siguiente = function (value) {
-					console.log(value);
+
 					setTimeout(function () {
 						$state.go(value);
 					}, 510);

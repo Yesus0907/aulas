@@ -28,7 +28,7 @@ angular.module("headerMenuMod", ["headerMenuMod"]).component("headerMenu", {
 
 		$scope.eje = page[0].type;
 		$scope.nombreEje = page[0].assets.contextRaw;
-		console.log("page", page);
+
 		// if (vista == page[0].type) {
 
 		// 	$scope.eje = page[0].type;
@@ -102,7 +102,7 @@ aulaApp.directive("buttonPrincipalMenu", [
 			) {
 				var root = $rootScope.datosCanvas;
 				$scope.canvas = $rootScope.config[0].type_context
-				console.log("header", $rootScope)
+
 
 				$scope.tareasLoad = function () {
 					$scope.tareas =

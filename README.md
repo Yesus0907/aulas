@@ -77,12 +77,7 @@ Para cambiar entre local y servidor ubique el archivo **./development/assets/js/
 `apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/'`
 
 
-
-
 ![project](http://contenidos.areandina.edu.co/repo/aulavirtual/readmi/appdeve.png)
-
-------------------------------------------------------------------------------------------------
-
 
 ------------------------------------------------------------------------------------------------
 
@@ -134,22 +129,19 @@ El siguiente **script** sirve para dinamizar el número de Ejes o Módulos en un
 		type_context: true,
 		lms: 'canvas'
 	};
-	
 ```
 #
 ** ¿Cómo funciona? **
 
 ** `cant`: ** `número` - recibe el número de Ejes o Módulos a renderizar.
 
-** `type`:  ** `string` - recibe el número de Ejes o Módulos a renderizar.
+** `type`:  ** `string` - recibe la unidad de medida para dividir el curso (Eje, Módulo, Nodo, etc).
 
-** `type_label`:  ** `string` - recibe el número de Ejes o Módulos a renderizar.
+** `type_label`:  ** `string` - recibe el mismo valor del `type`.
 
-** `type_context`:  ** `boolean` - recibe el número de Ejes o Módulos a renderizar.
+** `type_context`:  ** `boolean` - Por defecto es verdadero, cambiar a falso si el curso es Diplomado.
 
-** `lms`:  ** `número` - recibe el número de Ejes o Módulos a renderizar.
-	
+** `lms`:  ** `string` - recibe dos valores; canvas y moodle, cada uno cambia especificaciones en el front.
 
-
-	
-	
+#
+#

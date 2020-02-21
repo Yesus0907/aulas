@@ -125,7 +125,6 @@ $templateCache.put('modal-notification.html',
 	  	'<div class="wrapper-navegador" ui-scrollpoint="+100px">\
 			<div class="navegador-top">\
 				<div class="container-btns col-xs-12  no-padding">\
-					<button class="menu-button"><span>menu</span><p>MENU</p></button>\
 					<button class="trigg home-button" ui-sref="home" ><span class="lnr icon-home"></span><span class="nombre">HOME</span></button>\
 					<a href="{{tareasLoad()}}" target="_blank"><button class="tareas-button"><span class="lnr icon-graduation-hat"></span><span class="nombre">TAREAS</span></button></a>\
 				</div>\
@@ -276,7 +275,7 @@ $templateCache.put('modal-notification.html',
       <div class="content">\
             <section class="referente row row-sm-equal-height"  ng-if="showReferente()">\
               <div class="descripcion col-xs-12 col-sm-8 ">\
-                <span class="label"><span class="lnr icon-bubble"></span>Referente de pensamiento</span>\
+                <span class="label"><span class="lnr icon-bubble"></span>Desarrollo temático</span>\
                  <p ng-bind-html="text"></p>\
               </div>\
               <div class="col-xs-12 col-sm-4 no-padding " >\
@@ -284,7 +283,7 @@ $templateCache.put('modal-notification.html',
                   <div class="buttom-referente"  ng-click="pdfModal()">\
                     <div class="element-center">\
                       <div>\
-                       <span class="lnr icon-file-empty"></span><p>Ver PDF</p>\
+                       <span class="lnr icon-file-empty"></span><p>Ver documento</p>\
                       </div>\
                     </div>\
                   </div>\
@@ -322,7 +321,7 @@ $templateCache.put('modal-notification.html',
 			<p class="description">Has terminado el módulo <br> <span class="titulo">{{$ctrl.titulo}}</span></p>\
 		</div>\
 	</div>\
-	<div class="logos"><img src="https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/logos.svg" alt=""></div>\
+	<div class="logos"><img src="https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/logos.svg" alt=""></div>\
 </div>\
 	');
 	

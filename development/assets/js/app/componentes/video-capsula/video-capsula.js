@@ -75,7 +75,7 @@ aulaApp.directive('allIframe',[function () {
       var enlace = $scope.url;
       
       if ($scope.image == 0 || $scope.image == null){
-        $($element).find('.allIframe').css("background-image", "url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/img-iframe-back.jpg)");
+        $($element).find('.allIframe').css("background-image", "url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/img-iframe-back.jpg)");
       }else{
         $($element).find('.allIframe').css("background-image", 'url('+ $scope.image +')');
         // $($element).find('.video').attr('src', $scope.image);

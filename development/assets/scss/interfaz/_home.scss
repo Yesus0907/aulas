@@ -252,6 +252,22 @@
      }
 }
 
+#Anavigator .Abarp:nth-of-type(7) {
+     background: #D05193;
+     .ejen2 .guia {
+          border-left: 20px solid #D05193;
+     }
+}
+
+#Anavigator .Abarp:nth-of-type(8) {
+     background: #C7126F;
+     .ejen2 .guia {
+          border-left: 20px solid #C7126F;
+     }
+}
+
+
+
 // ======================================
 //****** variables locales
 $backwhite:rgba(255, 255, 255, 0.75);
@@ -610,7 +626,7 @@ $spaceH: $height / 6; //= 20px
      }
 
      .textEje {
-          color: $magentaInsti;
+          color: $grisPdf;
           font-family: BrownStd;
           font-weight: bold;
           z-index: 1;

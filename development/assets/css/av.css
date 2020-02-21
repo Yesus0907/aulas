@@ -204,47 +204,47 @@ table {
 
 @font-face {
      font-family: 'areandina';
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/areandinavoz-regular-webfont.woff2") format("woff2"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/areandinavoz-regular-webfont.woff") format("woff");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/areandinavoz-regular-webfont.woff2") format("woff2"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/areandinavoz-regular-webfont.woff") format("woff");
      font-weight: normal;
      font-style: normal;
 }
 
 @font-face {
      font-family: 'BrownStd';
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Bold.eot");
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Bold.eot?#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Bold.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Bold.ttf") format("truetype");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Bold.eot");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Bold.eot?#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Bold.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Bold.ttf") format("truetype");
      font-weight: bold;
      font-style: normal;
 }
 
 @font-face {
      font-family: 'BrownStd';
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Light.eot");
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Light.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-Light.ttf") format("truetype");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Light.eot");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Light.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-Light.ttf") format("truetype");
      font-weight: 300;
      font-style: normal;
 }
 
 @font-face {
      font-family: 'BrownStd';
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-BoldItalic.eot");
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-BoldItalic.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-BoldItalic.ttf") format("truetype");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-BoldItalic.eot");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-BoldItalic.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-BoldItalic.ttf") format("truetype");
      font-weight: bold;
      font-style: italic;
 }
 
 @font-face {
      font-family: 'BrownStd';
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-LightItalic.eot");
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-LightItalic.eot?#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-LightItalic.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/BrownStd-LightItalic.ttf") format("truetype");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-LightItalic.eot");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-LightItalic.eot?#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-LightItalic.woff") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/BrownStd-LightItalic.ttf") format("truetype");
      font-weight: normal;
      font-style: italic;
 }
 
 @font-face {
      font-family: 'icomoon';
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/icomoon.eot?k0g01q");
-     src: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/icomoon.eot?k0g01q#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/icomoon.ttf?k0g01q") format("truetype"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/icomoon.woff?k0g01q") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/fonts/icomoon.svg?k0g01q#icomoon") format("svg");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/icomoon.eot?k0g01q");
+     src: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/icomoon.eot?k0g01q#iefix") format("embedded-opentype"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/icomoon.ttf?k0g01q") format("truetype"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/icomoon.woff?k0g01q") format("woff"), url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/fonts/icomoon.svg?k0g01q#icomoon") format("svg");
      font-weight: normal;
      font-style: normal;
 }
@@ -3386,7 +3386,7 @@ vimeo .vimeo img.video {
 }
 
 .title-intro {
-     background-image: url("https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/back-title-intro.svg");
+     background-image: url("https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/back-title-intro.svg");
      background-size: cover;
      background-repeat: no-repeat;
      display: table;
@@ -4573,7 +4573,7 @@ modal .btn-large {
      -webkit-transform: translate3d(0, 0, 0);
      -moz-transform: translate3d(0, 0, 0);
      transform: translate3d(0, 0, 0);
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/1.svg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/1.svg);
 }
 
 modal .btn-large:hover {
@@ -4662,236 +4662,236 @@ modal .btn-large:before {
 
 modal .btn-large.default {
      background-position: bottom;
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/default.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/default.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.default {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/default.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/default.jpg);
      }
 }
 
 modal .btn-large.videorelato {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/videoRelato.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/videoRelato.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.videorelato {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/videoRelato.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/videoRelato.jpg);
      }
 }
 
 modal .btn-large.pruebaObjetiva {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/pruebaObjetiva.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/pruebaObjetiva.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.pruebaObjetiva {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/pruebaObjetiva.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/pruebaObjetiva.jpg);
      }
 }
 
 modal .btn-large.videoresumen {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/videoResumen.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/videoResumen.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.videoresumen {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/videoResumen.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/videoResumen.jpg);
      }
 }
 
 modal .btn-large.nubePalabras {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/nubePalabras.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/nubePalabras.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.nubePalabras {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/nubePalabras.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/nubePalabras.jpg);
      }
 }
 
 modal .btn-large.multimedia {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/multimedia.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/multimedia.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.multimedia {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/multimedia.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/multimedia.jpg);
      }
 }
 
 modal .btn-large.infografia {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/infografia.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/infografia.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.infografia {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/infografia.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/infografia.jpg);
      }
 }
 
 modal .btn-large.pdf {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/pdf.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/pdf.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.pdf {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/pdf.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/pdf.jpg);
      }
 }
 
 modal .btn-large.memonota {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/memonota.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/memonota.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.memonota {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/memonota.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/memonota.jpg);
      }
 }
 
 modal .btn-large.crucigrama {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/crucigrama.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/crucigrama.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.crucigrama {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/crucigrama.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/crucigrama.jpg);
      }
 }
 
 modal .btn-large.sopaLetras {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/sopaLetras.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/sopaLetras.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.sopaLetras {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/sopaLetras.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/sopaLetras.jpg);
      }
 }
 
 modal .btn-large.organizadorGrafico {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/organizadorGrafico.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/organizadorGrafico.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.organizadorGrafico {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/organizadorGrafico.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/organizadorGrafico.jpg);
      }
 }
 
 modal .btn-large.controlLectura {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/controlLectura.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/controlLectura.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.controlLectura {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/controlLectura.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/controlLectura.jpg);
      }
 }
 
 modal .btn-large.casoSimulado {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/casoSimulado.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/casoSimulado.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.casoSimulado {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/casoSimulado.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/casoSimulado.jpg);
      }
 }
 
 modal .btn-large.casoModelo {
      background-position: center;
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/casoModelo.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/casoModelo.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.casoModelo {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/casoModelo.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/casoModelo.jpg);
      }
 }
 
 modal .btn-large.actividadRepaso {
      background-position: bottom;
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/actividadRepaso.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/actividadRepaso.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.actividadRepaso {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/actividadRepaso.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/actividadRepaso.jpg);
      }
 }
 
 modal .btn-large.emparejamiento {
      background-position: center;
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/emparejamiento.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/emparejamiento.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.emparejamiento {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/emparejamiento.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/emparejamiento.jpg);
      }
 }
 
 modal .btn-large.juegoRoles {
      background-position: center;
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/juegoRoles.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/juegoRoles.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.juegoRoles {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/juegoRoles.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/juegoRoles.jpg);
      }
 }
 
 modal .btn-large.podcast {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/podcast.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/podcast.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.podcast {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/podcast.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/podcast.jpg);
      }
 }
 
 modal .btn-large.zonasActivas {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/zonasActivas.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/zonasActivas.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.zonasActivas {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/zonasActivas.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/zonasActivas.jpg);
      }
 }
 
 modal .btn-large.demostracionRoles {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/demostracionRoles.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/demostracionRoles.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.demostracionRoles {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/demostracionRoles.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/demostracionRoles.jpg);
      }
 }
 
 modal .btn-large.actividad {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/actividad.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/actividad.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.actividad {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/actividad.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/actividad.jpg);
      }
 }
 
 modal .btn-large.galeria {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/300w/galeria.jpg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/300w/galeria.jpg);
 }
 
 @media (min-width: 768px) {
      modal .btn-large.galeria {
-          background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/btns/700w/galeria.jpg);
+          background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/btns/700w/galeria.jpg);
      }
 }
 
@@ -5449,19 +5449,19 @@ header-menu .logos img {
 }
 
 [data-state="eje1"] .headerMenu .num-eje-deco {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/1.svg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/1.svg);
 }
 
 [data-state="eje2"] .headerMenu .num-eje-deco {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/2.svg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/2.svg);
 }
 
 [data-state="eje3"] .headerMenu .num-eje-deco {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/3.svg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/3.svg);
 }
 
 [data-state="eje4"] .headerMenu .num-eje-deco {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/4.svg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/4.svg);
 }
 
 [data-state="cierre"] .back {
@@ -5485,7 +5485,7 @@ header-menu .logos img {
      height: 100%;
      position: absolute;
      width: 100%;
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/header-title/triangule.svg);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/header-title/triangule.svg);
      background-repeat: no-repeat;
      background-size: 100%;
      background-size: cover;
@@ -6879,7 +6879,7 @@ av-footer .row {
 
 av-footer .button-next,
 av-footer .button-prev {
-     background-image: url(https://contenidos.areandina.edu.co/repo/aulacanvas/2.0/prod/assets/images/pattern-button-footer.png);
+     background-image: url(https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/pattern-button-footer.png);
      background-size: contain;
 }
 

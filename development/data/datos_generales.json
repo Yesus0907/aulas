@@ -1,0 +1,61 @@
+{
+  
+  "ciclo": {
+    "tipoCiclo": "nn"
+  },
+
+  "introduccion": {
+    "pregunta": "Presentación de Areandina.",
+    "url": "https://player.vimeo.com/external/348847203.sd.mp4?s=e2d89e296141709396eb157282eefb1f98f0dbe7&profile_id=165"
+  },
+
+  "referente": {
+    "url": "data/recursos/descubriendo_1/index.html",
+    "descripcion": "El documento presenta un recorrido institucional el cual inicia con la creación de la Fundación Universitaria; luego, a través de una corta reseña histórica presenta su evolución educativa; después, se reconoce a sus fundadores y gestores; hasta llegar a la actualidad e identificar sus líderes; el rector nacional y los rectores de sede. Y al finalizar, es posible conocer sus facultades y los valores institucionales",
+    "titulo": "Descubriendo Areandina",
+    "type": "iframe"
+  },
+  
+
+  "recursos": {
+    "instruccion": "A continuación, encontrarás los recursos y actividades de aprendizaje señalados en el documento  del curso. Te servirán para afianzar destrezas y habilidades sobre los temas desarrollados e igualmente, para conocer con detalle las características y conceptos asociados.",
+    "list": [
+      {
+        "url": "https://www.youtube.com/embed/1S1UZQzxqZI",
+        "titulo": "Areandina - 34 años educando a Colombia",
+        "label": "videoCapsula",
+        "type": "iframe",
+        "number": "col-12 col-md-6"
+      },
+      {
+        "url": "data/recursos/descubriendo_2/index.html",
+        "titulo": "emparejamiento",
+        "label": "emparejamiento",
+        "type": "iframe",
+        "number": "col-12 col-md-6"
+      },
+      {
+        "url": "data/recursos/descubriendo_3/index.html",
+        "titulo": "galería",
+        "label": "galeria",
+        "type": "iframe",
+        "number": "col-12 col-md-6"
+      },
+      {
+        "url": "data/recursos/descubriendo_4/index.html",
+        "titulo": "memonota",
+        "label": "actividad",
+        "type": "iframe",
+        "number": "col-12 col-md-6"
+      }
+      
+    ]
+  },
+
+  "pdfgeneral":[ {
+    "url": "data/recursos/pdf/Historia_Areandina.pdf",
+    "type": "pdf"
+  }
+]
+
+}

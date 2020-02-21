@@ -16,7 +16,8 @@ aulaApp.directive("contenido", ["versionApp", "$rootScope", function (versionApp
 			fotoAutor: "@",
 			nombreAutor2: "@",
 			fotoAutor2: "@",
-			descripcionAutor2: "@"
+			descripcionAutor2: "@",
+			colPreguntaIntro: "@"
 		},
 		controllerAs: 'ctrl',
 		bindToController: {
@@ -50,6 +51,8 @@ aulaApp.directive("contenido", ["versionApp", "$rootScope", function (versionApp
 
 				$scope.text2 = this.textu;
 			}
+
+
 			// modal para tutor
 			$scope.pdfModal = function () {
 				ModalService.showModal({
@@ -94,8 +97,6 @@ aulaApp.directive("contenido", ["versionApp", "$rootScope", function (versionApp
 				}
 			}
 			// console.log($scope.videoId);
-
-
 		},
 		link: function ($scope, $rootScope) {
 			$(document).ready(function () {

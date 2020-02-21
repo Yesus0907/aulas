@@ -6,7 +6,7 @@
 		ng-repeat="item in homemenu" class="Abarp" id="{{'Abar' +  (item.index + 1)}}"
 		ng-style="{ width:( 100 / homemenu.length + '%' )}">
 		<a ui-sref="{{item.type + (mindex ? item.index: undefined)}}">
-			<div class="ejen1">
+			<!--<div class="ejen1">
 				<div>
 					<p class="textEje uppercase">
 						{{item.typeLabel + ' ' + mindex}}</p>
@@ -14,7 +14,7 @@
 					<p class="hesag"></p>
 				</div>
 				<h2 ng-if="item.type_context" ng-bind-html="item.assets.context_open"></h2>
-			</div>
+			</div>-->
 			<div class="ejen2">
 				<div>
 					<p class="textEje uppercase">

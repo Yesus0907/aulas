@@ -57,8 +57,8 @@ aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
 	appVersion: "2.1.0",
 
-	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulavirtual/assets/',
-	// apiUrl: "./assets/"
+	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/',
+	//apiUrl: "./assets/"
 });
 
 //==================================================================
@@ -527,6 +527,26 @@ function createRoutes(data, $sce) {
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/pongamos-en-practica.png",
 			small_icon: "icon-lego",
+
+		},
+		{
+			context: "Propongamos",
+			contextRaw: "Propongamos",
+			background: "pro <br> pon <br> ga <br> mos ",
+			context_open: "Propongamos",
+			icon:
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/propongamos.png",
+			small_icon: "icon-bombillo",
+
+		},
+		{
+			context: "Propongamos",
+			contextRaw: "Propongamos",
+			background: "pro <br> pon <br> ga <br> mos ",
+			context_open: "Propongamos",
+			icon:
+				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/propongamos.png",
+			small_icon: "icon-bombillo",
 
 		},
 		{

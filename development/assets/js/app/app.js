@@ -56,7 +56,6 @@ aulaApp.config([
 aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
 	appVersion: "2.1.0",
-
 	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/',
 	//apiUrl: "./assets/"
 });
@@ -505,7 +504,7 @@ function createRoutes(data, $sce) {
 			background: "con <br> cep <br> tua<br> lice <br>mos",
 			context_open: "Conceptualicemos",
 			icon:
-				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/conceptualicemos.png",
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje1.png",
 			small_icon: "icon-libro",
 
 		},
@@ -515,7 +514,7 @@ function createRoutes(data, $sce) {
 			background: "ana <br> lice <br> mos<br> la si<br>tua <br>cíon",
 			context_open: "Analicemos la<br> situación",
 			icon:
-				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/alanicemos-la-situacion.png",
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje2.png",
 			small_icon: "icon-engranaje",
 
 		},
@@ -525,7 +524,7 @@ function createRoutes(data, $sce) {
 			background: "pon <br> ga <br>mos <br> en <br> prác<br>tica ",
 			context_open: "Pongamos en<br> práctica",
 			icon:
-				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/pongamos-en-practica.png",
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje3.png",
 			small_icon: "icon-lego",
 
 		},
@@ -535,7 +534,7 @@ function createRoutes(data, $sce) {
 			background: "pro <br> pon <br> ga <br> mos ",
 			context_open: "Propongamos",
 			icon:
-				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/propongamos.png",
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje4.png",
 			small_icon: "icon-bombillo",
 
 		},
@@ -545,7 +544,7 @@ function createRoutes(data, $sce) {
 			background: "pro <br> pon <br> ga <br> mos ",
 			context_open: "Propongamos",
 			icon:
-				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/propongamos.png",
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje5.png",
 			small_icon: "icon-bombillo",
 
 		},
@@ -555,7 +554,7 @@ function createRoutes(data, $sce) {
 			background: "pro <br> pon <br> ga <br> mos ",
 			context_open: "Propongamos",
 			icon:
-				"https://contenidos.areandina.edu.co/repo/aulavirtual/assets/img/home/propongamos.png",
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje6.png",
 			small_icon: "icon-bombillo",
 
 		}

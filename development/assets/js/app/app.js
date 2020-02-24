@@ -506,6 +506,7 @@ function createRoutes(data, $sce) {
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje1.png",
 			small_icon: "icon-libro",
+			//small_icon: "icon-areandina",
 
 		},
 		{
@@ -515,7 +516,7 @@ function createRoutes(data, $sce) {
 			context_open: "Analicemos la<br> situación",
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje2.png",
-			small_icon: "icon-engranaje",
+			small_icon: "icon-libro",
 
 		},
 		{
@@ -525,7 +526,7 @@ function createRoutes(data, $sce) {
 			context_open: "Pongamos en<br> práctica",
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje3.png",
-			small_icon: "icon-lego",
+			small_icon: "icon-libro",
 
 		},
 		{
@@ -535,7 +536,7 @@ function createRoutes(data, $sce) {
 			context_open: "Propongamos",
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje4.png",
-			small_icon: "icon-bombillo",
+			small_icon: "icon-libro",
 
 		},
 		{
@@ -545,7 +546,7 @@ function createRoutes(data, $sce) {
 			context_open: "Propongamos",
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje5.png",
-			small_icon: "icon-bombillo",
+			small_icon: "icon-libro",
 
 		},
 		{
@@ -555,7 +556,7 @@ function createRoutes(data, $sce) {
 			context_open: "Propongamos",
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje6.png",
-			small_icon: "icon-bombillo",
+			small_icon: "icon-libro",
 
 		}
 	];

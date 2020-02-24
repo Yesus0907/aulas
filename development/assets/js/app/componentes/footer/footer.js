@@ -120,7 +120,7 @@ aulaApp.directive("avFooter", [
 						navFooter.push(externalButton);
 					}
 					if (last) {
-						navFooter.push(activitiesButton);
+						//navFooter.push(activitiesButton);
 					}
 
 

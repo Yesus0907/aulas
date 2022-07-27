@@ -5916,6 +5916,23 @@ button.btn-autor {
      border-left: 20px solid #7DC672;
 }
 
+#Anavigator .Abarp:nth-of-type(7) {
+     background: #dd7de0;
+}
+
+#Anavigator .Abarp:nth-of-type(7) .ejen2 .guia {
+     border-left: 20px solid #c788bf;
+}
+
+#Anavigator .Abarp:nth-of-type(8) {
+     background: #c42890;
+}
+
+#Anavigator .Abarp:nth-of-type(8) .ejen2 .guia {
+     border-left: 20px solid #dd73cb;
+}
+
+
 #wrapppernav {
      position: fixed;
      width: 100vw;

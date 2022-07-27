@@ -57,7 +57,7 @@ aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
 	appVersion: "2.1.0",
 	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/',
-	//apiUrl: "./assets/"
+	// apiUrl: "./assets/"
 });
 
 //==================================================================
@@ -556,6 +556,26 @@ function createRoutes(data, $sce) {
 			context_open: "Propongamos",
 			icon:
 				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje6.png",
+			small_icon: "icon-libro",
+
+		},
+		{
+			context: "Propongamos",
+			contextRaw: "Propongamos",
+			background: "pro <br> pon <br> ga <br> mos ",
+			context_open: "Propongamos",
+			icon:
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje7.png",
+			small_icon: "icon-libro",
+
+		},
+		{
+			context: "Propongamos",
+			contextRaw: "Propongamos",
+			background: "pro <br> pon <br> ga <br> mos ",
+			context_open: "Propongamos",
+			icon:
+				"https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/images/home/iconoeje8.png",
 			small_icon: "icon-libro",
 
 		}

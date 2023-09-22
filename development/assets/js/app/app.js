@@ -57,7 +57,7 @@ aulaApp.constant("versionApp", {
 	appName: "AulaVirtual - AREANDINA",
 	appVersion: "2.1.0",
 	apiUrl: 'https://contenidos.areandina.edu.co/repo/aulamoodle/persianas/assets/',
-	// apiUrl: "./assets/"
+	 //apiUrl: "./assets/"
 });
 
 //==================================================================
